@@ -26,18 +26,16 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
+                'only' => ['logout', 'signup','contact','about'],
                 'rules' => [
                     [
-                        'actions' => ['signup'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'actions' => ['logout'],
+                        'actions' => ['logout','signup','contact','about'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
+                    [
+                        'allow' => false,
+                    ]
                 ],
             ],
             'verbs' => [
@@ -167,7 +165,7 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionRequestPasswordReset()
+    /*public function actionRequestPasswordReset()
     {
         $model = new PasswordResetRequestForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
@@ -183,7 +181,7 @@ class SiteController extends Controller
         return $this->render('requestPasswordResetToken', [
             'model' => $model,
         ]);
-    }
+    }*/
 
     /**
      * Resets password.
@@ -192,7 +190,7 @@ class SiteController extends Controller
      * @return mixed
      * @throws BadRequestHttpException
      */
-    public function actionResetPassword($token)
+    /*public function actionResetPassword($token)
     {
         try {
             $model = new ResetPasswordForm($token);
@@ -209,5 +207,5 @@ class SiteController extends Controller
         return $this->render('resetPassword', [
             'model' => $model,
         ]);
-    }
+    }*/
 }
