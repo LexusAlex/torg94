@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //'picture_annotation',
             [
                 'attribute'=>'picture_text',
-                'value'=>\Yii::$app->params['frontendurl'].$model->picture_text,
+                'value'=>\yii\helpers\Url::to('upload/'.$model->picture_text, true),
                 'format' => ['image',['width'=>'200','height'=>'200']],
             ],
             'annotation:html',
