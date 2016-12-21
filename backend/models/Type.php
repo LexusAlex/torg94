@@ -9,6 +9,8 @@ use Yii;
  *
  * @property integer $id
  * @property string $title
+ *
+ * @property Record[] $records
  */
 class Type extends \yii\db\ActiveRecord
 {
@@ -40,6 +42,10 @@ class Type extends \yii\db\ActiveRecord
             'id' => 'ID',
             'title' => 'Title',
         ];
+    }
+    public function getRecords()
+    {
+        return $this->hasMany(Record::className(), ['tid' => 'id'])->inverseOf('t');
     }
 
     /**

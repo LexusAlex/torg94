@@ -12,7 +12,7 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     //'defaultRoute' => 'front',
-    'layout'=> 'front',
+    'layout'=> 'main',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
@@ -43,6 +43,11 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                [
+                    'pattern' => 'news/<id:\d{1,4}>',
+                    'route' => 'news/index',
+                    'suffix' => '.html',
+                ],
             ],
         ],
 

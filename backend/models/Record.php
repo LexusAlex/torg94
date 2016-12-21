@@ -70,6 +70,13 @@ class Record extends \yii\db\ActiveRecord
     }
 
     /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getT()
+    {
+        return $this->hasOne(Type::className(), ['id' => 'tid'])->inverseOf('records');
+    }
+    /**
      * @inheritdoc
      * @return RecordQuery the active query used by this AR class.
      */
