@@ -5,12 +5,12 @@ namespace backend\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Type;
+use backend\models\Category;
 
 /**
- * TypeSearch represents the model behind the search form about `backend\models\Type`.
+ * CategorySearch represents the model behind the search form about `backend\models\Category`.
  */
-class TypeSearch extends Type
+class CategorySearch extends Category
 {
     /**
      * @inheritdoc
@@ -19,7 +19,7 @@ class TypeSearch extends Type
     {
         return [
             [['id'], 'integer'],
-            [['title'], 'safe'],
+            [['name'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class TypeSearch extends Type
      */
     public function search($params)
     {
-        $query = Type::find();
+        $query = Category::find();
 
         // add conditions that should always apply here
 
@@ -62,7 +62,7 @@ class TypeSearch extends Type
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'title', $this->title]);
+        $query->andFilterWhere(['like', 'name', $this->name]);
 
         return $dataProvider;
     }

@@ -38,6 +38,7 @@ AppAsset::register($this);
         ['label' => 'На главную', 'url' => ['/site/index'],'visible' => !Yii::$app->user->isGuest],
         ['label' => 'Публикации', 'url' => ['/record/index'],'visible' => !Yii::$app->user->isGuest],
         ['label' => 'Типы публикаций', 'url' => ['/type/index'],'visible' => !Yii::$app->user->isGuest],
+        ['label' => 'Категории статей', 'url' => ['/category/index'],'visible' => !Yii::$app->user->isGuest],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Вход', 'url' => ['/site/login']];

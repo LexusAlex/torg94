@@ -98,8 +98,13 @@ use mihaildev\ckeditor\CKEditor;
     ?>
 
 
-    <?= $form->field($model, 'tid')->dropDownList(\backend\models\Type::find()->select(['title', 'id'])->indexBy('id')->column())->hint('Тип публикации <br> При выборе типа Статья можно выбрать темы'); ?>
+    <?= $form->field($model, 'tid')->dropDownList(\backend\models\Type::find()->select(['title', 'id'])->indexBy('id')->column())->hint('Тип публикации <br> При выборе типа Статья можно выбрать категорию'); ?>
 
+    <?= $form->field($model, 'categoryArray')->checkboxList(
+        \backend\models\Category::find()->select(['name', 'id'])->indexBy('id')->column(),
+        ['class'=>'checkbox']
+    )->hint('Добавьте или обновите категории статьи');
+    ?>
     <?php /*echo $form->field($model, 'type')->textInput(['maxlength' => true]) */?>
     <?php //$form->field($model, 'author')->textInput(['maxlength' => true]) ?>
 

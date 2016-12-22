@@ -3,11 +3,11 @@
 namespace backend\models;
 
 /**
- * This is the ActiveQuery class for [[Record]].
+ * This is the ActiveQuery class for [[RecordCategory]].
  *
- * @see Record
+ * @see RecordCategory
  */
-class RecordQuery extends \yii\db\ActiveQuery
+class RecordCategoryQuery extends \yii\db\ActiveQuery
 {
     /*public function active()
     {
@@ -16,7 +16,7 @@ class RecordQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return Record[]|array
+     * @return RecordCategory[]|array
      */
     public function all($db = null)
     {
@@ -25,7 +25,7 @@ class RecordQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return Record|array|null
+     * @return RecordCategory|array|null
      */
     public function one($db = null)
     {

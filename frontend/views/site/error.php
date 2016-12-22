@@ -9,19 +9,46 @@ use yii\helpers\Html;
 
 $this->title = $name;
 ?>
-<div class="container">
-    <div class="content">
-        <h1><?= Html::encode($this->title) ?></h1>
+<div class="block-of-news-wrp">
+    <div class="container">
+        <div class="content">
+            <div class="">
+                <div class="col-xs-12">
+                    <div class="one-news-position">
+                        <div class="alert alert-danger">
+                            <?= nl2br(Html::encode($message)) ?>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="alert alert-danger">
-            <?= nl2br(Html::encode($message)) ?>
+                <div class="col-xs-12 hidden-xs">
+                    <div class="one-news-position">
+
+                    </div>
+                </div>
+                <div class="col-xs-12 hidden-xs">
+                    <div class="one-news-position">
+
+                    </div>
+                </div>
+                <div class="col-xs-12 hidden-xs">
+                    <div class="one-news-position">
+
+                    </div>
+                </div>
+                <div class="col-xs-12 hidden-xs">
+                    <div class="one-news-position">
+
+                    </div>
+                </div>
+                <div class="col-xs-12 hidden-xs">
+                    <div class="one-news-position">
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-
-        <p>
-            The above error occurred while the Web server was processing your request.
-        </p>
-        <p>
-            Please contact us if you think this is a server error. Thank you.
-        </p>
     </div>
 </div>

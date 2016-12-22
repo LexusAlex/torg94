@@ -928,3 +928,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 		top: 196px;
 	}
 }
+.error{
+	float: left;
+	width: 100%;
+}
