@@ -23,6 +23,23 @@ title заголовок
 subject - тема для статьи
 
 record_subject - связь статьи и темы
+
+Генератор паролей когда нужно сгенерировать
+auth_key Yii::$app->security->generateRandomString();
+pssword Yii::$app->security->generatePasswordHash($password)
+=======
+Порядок развертывания на 22 дек 2016
+1. Актуальная база а именно одна таблица NA_news(record) скачать используя параметры только данные формат zip только после распаковки размер должен быть ~40мб
+2. Замена во всем файле ctrl + H
+    `NA_news` (`id`, `spot`, `data`, `archive`, `author`, `ahref`, `pic1`, `pic2`, `annot`, `text`, `cID`, `type`)
+    на
+    `record` (`id`, `title`, `date`, `archive`, `author`, `link`, `picture_annotation`, `picture_text`, `annotation`, `text`, `tid`, `type`)
+3. Удалить все таблицы в базе
+4. Выбрать режим dev prod
+5. Запустить миграции
+6. Залить дамп таблицы record с переименованными колонками должно все залится без ошибок, может понадобиться сжать sql фаил
+7. Скопировать все изображения со старого сайта
+8. Удалить и заменить на новые изображения, добавить в гит
 =======
 Backend and Frontend
 #1 - Добавить htaccess и настроить корневую деректорию в хостах

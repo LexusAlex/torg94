@@ -12,7 +12,7 @@ class m161125_095619_create_tables_record_type extends Migration
             'title' => $this->string(255)->notNull(),
             'date' => $this->dateTime()->null(),
             'archive' => $this->integer(1)->notNull()->defaultValue(0),
-            'status'=> $this->integer()->notNull(),
+            'status'=> $this->integer()->notNull()->defaultValue(1),
             'author'=> $this->string(255)->notNull(),
             'link'=> $this->string(255)->notNull(),
             'picture_annotation'=> $this->string(255)->notNull(),

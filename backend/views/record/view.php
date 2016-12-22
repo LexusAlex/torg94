@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute'=>'picture_text',
                 'value'=>\yii\helpers\Url::to('upload/'.$model->picture_text, true),
-                'format' => ['image',['width'=>'200','height'=>'200']],
+                'format' => ['image'],
             ],
             'annotation:html',
             'text:html',
