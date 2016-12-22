@@ -51,6 +51,14 @@ class RecordController extends Controller
      */
     public function actionIndex()
     {
+        \Yii::$container->set('yii\widgets\LinkPager', [
+            'registerLinkTags'=> true,
+            'firstPageLabel' => 'Первая',
+            'lastPageLabel' => 'Последняя',
+            //'nextPageLabel' => 'Следующая',
+            //'prevPageLabel' => 'Предыдущая',
+            //'maxButtonCount' => 5,
+        ]);
         $searchModel = new RecordSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 

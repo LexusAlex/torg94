@@ -42,11 +42,16 @@ class RecordSearch extends Record
     public function search($params)
     {
         $query = Record::find();
+        //$query = Record::find()->with(['t']);
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                //'pageSizeParam' => false,
+                'forcePageParam' => false,
+            ],
         ]);
 
         $this->load($params);

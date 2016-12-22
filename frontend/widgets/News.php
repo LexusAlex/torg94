@@ -16,6 +16,9 @@ class News extends Widget
 
     }
 
+    /**
+     * @return string
+     */
     public function run()
     {
         $news = Record::find()->where(['status'=> 1,'tid'=> 1])->with(['t'])->orderBy('date DESC')->asArray()->limit(5)->all();

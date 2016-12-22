@@ -27,7 +27,13 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'title:html',
+            [
+                'attribute' => 'title',
+                'format' => 'html',
+                'content'=>function($data){
+                    return \yii\helpers\StringHelper::truncate($data->title, 80,'...');
+                },
+            ],
             'date:datetime',
             //'archive',
             [
