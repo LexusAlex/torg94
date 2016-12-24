@@ -46,9 +46,10 @@ return [
             'rules' => [
                 [
                     'pattern' => 'news/<id:\d{1,4}>',
-                    'route' => 'news/index',
+                    'route' => 'news/views',
                     'suffix' => '.html',
                 ],
+                //'news/all'=> 'news/index',
             ],
         ],
 

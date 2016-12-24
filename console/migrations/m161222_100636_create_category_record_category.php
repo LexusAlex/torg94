@@ -10,6 +10,7 @@ class m161222_100636_create_category_record_category extends Migration
         $this->createTable('{{%category}}', [
             'id' => $this->primaryKey(),
             'name' => $this->string(100)->notNull()->unique(),
+            'last_record_id' => $this->integer()
         ]);
         // record_category
         $this->createTable(
@@ -47,12 +48,18 @@ class m161222_100636_create_category_record_category extends Migration
 
         $this->batchInsert(
             'category',
-            ['name'],
+            ['name','last_record_id'],
             [
-                ['Заказчику'],
-                ['Поставщику'],
-                ['44-ФЗ'],
-                ['223-ФЗ'],
+                ['Заказчику',8577],
+                ['Поставщику',8577],
+                ['44-ФЗ',8577],
+                ['223-ФЗ',8577],
+                ['Закон',8577],
+                ['В мире',8577],
+                ['Аналитика',8577],
+                ['Тема дня',8577],
+                ['Закупки',8577],
+                ['Сервисы',8577],
             ]
         );
     }

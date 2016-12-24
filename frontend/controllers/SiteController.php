@@ -1,9 +1,11 @@
 <?php
 namespace frontend\controllers;
 
+use backend\models\Category;
 use backend\models\Record;
 use Yii;
 use yii\base\InvalidParamException;
+use yii\helpers\VarDumper;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -72,7 +74,13 @@ class SiteController extends Controller
     public function actionIndex()
     {
 
-        return $this->render('index');
+        $categories = Category::findAll([5,6,7,8,9,10]);
+        $records = [];
+        foreach ($categories as $id=>$item){
+            $records[] = Record::find()->where(['id'=>$item->last_record_id])->with('categories')->one();
+            $records[$id]->cat = $item->name;
+        }
+        return $this->render('index',['records'=>$records]);
     }
 
     /**

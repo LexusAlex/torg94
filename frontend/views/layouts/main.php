@@ -64,7 +64,7 @@ AppAsset::register($this);
         <aside class="aside-left">
             <h3>НОВОСТИ</h3>
             <?= News::widget(); ?>
-            <a href="<?php echo \yii\helpers\Url::to(['news/all',]);?>" class="all-news">Все новости</a>
+            <a href="<?php echo \yii\helpers\Url::to(['news/index ']);?>" class="all-news">Все новости</a>
         </aside>
     </div>
     <main class="main">
@@ -89,7 +89,7 @@ AppAsset::register($this);
             <div class="container">
                 <div class="content">
                     <div class="logo">
-                        <a href=""><img src="img/logo.png" alt=""></a>
+                        <a href=""><?php echo Html::img(['img/logo.png']);?></a>
                         <h1>ГЛАВНОЕ ОБ ЭЛЕКТРОННЫХ ЗАКУПКАХ</h1>
                     </div>
                 </div>

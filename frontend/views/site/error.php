@@ -21,22 +21,22 @@ $this->title = $name;
                     </div>
                 </div>
 
-                <div class="col-xs-12 hidden-xs">
+                <div class="col-xs-12 hidden-xs hidden-md">
                     <div class="one-news-position">
 
                     </div>
                 </div>
-                <div class="col-xs-12 hidden-xs">
+                <div class="col-xs-12 hidden-xs hidden-md">
                     <div class="one-news-position">
 
                     </div>
                 </div>
-                <div class="col-xs-12 hidden-xs">
+                <div class="col-xs-12 hidden-xs hidden-md">
                     <div class="one-news-position">
 
                     </div>
                 </div>
-                <div class="col-xs-12 hidden-xs">
+                <div class="col-xs-12 hidden-xs hidden-md">
                     <div class="one-news-position">
 
                     </div>

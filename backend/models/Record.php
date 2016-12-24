@@ -28,6 +28,7 @@ use Yii;
  */
 class Record extends \yii\db\ActiveRecord
 {
+    public $cat;
     /**
      * @inheritdoc
      */

@@ -35,84 +35,21 @@ $this->title = 'Госзакупки: ФЗ-44, ФЗ-223, ФЗ-94, государ
     <div class="container">
         <div class="content">
             <div class="block-of-news">
-                <div class="col-lg-6 pad-no col-md-6 col-sm-6 col-xs-12">
-                    <div class="one-news-position">
-                        <a href="">
-                            <img src="img/ava-news.png" alt="">
-                            <div class="only-info">
-                                <span>19/10/16</span>
-                                <h4>закон:</h4>
-                                <h3>Министерство УФАС:</h3>
-                                <p>антимонопольщики показали, как получить новый автомобиль и не нарушить закон о госзакупках</p>
-                            </div>
-                        </a>
-                    </div>
+                <?php foreach ($records as $record){ ?>
+                    <div class="col-lg-6 pad-no col-md-6 col-sm-6 col-xs-12">
+                        <div class="one-news-position">
+                            <a href="<?php echo \yii\helpers\Url::to(['articles/views', 'id' => $record->id]);?>">
+                                <?php echo \yii\helpers\Html::img(['/upload/'.$record->picture_text]);?>
+                                <div class="only-info">
+                                    <span><?php echo \Yii::$app->formatter->asDatetime($record->date, "php:d/m/Y");?></span>
+                                    <h4><?php echo $record->cat;?></h4>
+                                    <h3><?php echo $record->title;?></h3>
+                                    <p><?php echo \yii\helpers\StringHelper::truncate($record->annotation, 100, '...'); ?></p>
+                                </div>
+                            </a>
+                        </div>
                 </div>
-                <div class="col-lg-6 pad-no col-md-6 col-sm-6 col-xs-12">
-                    <div class="one-news-position">
-                        <a href="">
-                            <img src="img/ava-news.png" alt="">
-                            <div class="only-info">
-                                <span>19/10/16</span>
-                                <h4>закон:</h4>
-                                <h3>Министерство УФАС:</h3>
-                                <p>антимонопольщики показали, как получить новый автомобиль и не нарушить закон о госзакупках</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 pad-no col-md-6 col-sm-6 col-xs-12">
-                    <div class="one-news-position">
-                        <a href="">
-                            <img src="img/ava-news.png" alt="">
-                            <div class="only-info">
-                                <span>19/10/16</span>
-                                <h4>закон:</h4>
-                                <h3>Министерство УФАС:</h3>
-                                <p>антимонопольщики показали, как получить новый автомобиль и не нарушить закон о госзакупках</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 pad-no col-md-6 col-sm-6 col-xs-12">
-                    <div class="one-news-position">
-                        <a href="">
-                            <img src="img/ava-news.png" alt="">
-                            <div class="only-info">
-                                <span>19/10/16</span>
-                                <h4>закон:</h4>
-                                <h3>Министерство УФАС:</h3>
-                                <p>антимонопольщики показали, как получить новый автомобиль и не нарушить закон о госзакупках</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 pad-no col-md-6 col-sm-6 col-xs-12">
-                    <div class="one-news-position">
-                        <a href="">
-                            <img src="img/ava-news.png" alt="">
-                            <div class="only-info">
-                                <span>19/10/16</span>
-                                <h4>закон:</h4>
-                                <h3>Министерство УФАС:</h3>
-                                <p>антимонопольщики показали, как получить новый автомобиль и не нарушить закон о госзакупках</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 pad-no col-md-6 col-sm-6 col-xs-12">
-                    <div class="one-news-position">
-                        <a href="">
-                            <img src="img/ava-news.png" alt="">
-                            <div class="only-info">
-                                <span>19/10/16</span>
-                                <h4>закон:</h4>
-                                <h3>Министерство УФАС:</h3>
-                                <p>антимонопольщики показали, как получить новый автомобиль и не нарушить закон о госзакупках</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                <?php } ?>
                 <a href="" class="all-news">Все статьи</a>
             </div>
             <div class="special-project">
