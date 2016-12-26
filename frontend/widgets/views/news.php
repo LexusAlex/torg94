@@ -5,7 +5,7 @@ foreach ($news as $new){
         <a href="<?php echo \yii\helpers\Url::to(['news/views', 'id' => $new['id']]);?>">
             <ul>
                 <li>
-                    <span><?php echo \Yii::$app->formatter->asDatetime($new['date'], "php:d.m.Y H:i");?></span>
+                    <span><?php echo date('d.m.Y H:i', strtotime($new['date']));?></span>
                     <h5>/ <?php echo $new['title']?></h5>
                     <p><?php echo \yii\helpers\StringHelper::truncate($new['annotation'], 100, '...'); ?></p>
                 </li>
