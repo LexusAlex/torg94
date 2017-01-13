@@ -1,3 +1,7 @@
+<?php
+$this->title = $model->title;
+$this->registerMetaTag(['name' => 'description','content' => 'Госзакупки: ФЗ-44, ФЗ-223, ФЗ-94, государственные закупки, электронные торги и открытый конкурс для госзаказа - '.$model->title]);
+?>
 <div class="container-news">
         <div class="col-lg-10 pad-n col-md-12 col-sm-12 col-xs-12">
             <div class="wrp-to-one-new">
