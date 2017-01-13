@@ -42,7 +42,7 @@ class RecordSearch extends Record
     public function search($params)
     {
         //$query = Record::find();
-        $query = Record::find()->with(['t']);
+        $query = Record::find()->with(['t'])->orderBy('id DESC');
 
         // add conditions that should always apply here
 

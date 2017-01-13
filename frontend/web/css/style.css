@@ -646,6 +646,130 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 .aside-left .last-news{
 	margin-bottom: 10px;
 }
+
+
+
+/*ALL NEWS*/
+/*ALL NEWS*/
+/*ALL NEWS*/
+/*ALL NEWS*/
+/*ALL NEWS*/
+
+.container-news{
+	float: none;
+	display: table;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1170px;
+}
+.header-menu-all-news{
+	border-bottom: none;
+}
+.header-menu-all-news ul{
+	float: none;
+	margin: 0 auto;
+	width: 70%;
+
+}
+.header-menu-all-news ul li{
+	padding: 10px 0;
+}
+.secondary-menu{
+	float: left;
+	width: 100%;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	background-color: #FFF;
+	padding: 0 50px;
+}
+.secondary-menu ul{
+	float: left;
+	width: 100%;
+	padding: 15px 0;
+}
+.secondary-menu ul li{
+	float: left;
+	width: auto;
+	margin: 0 1.9%;
+}
+
+.secondary-menu ul li a{
+	float: left;
+	width: auto;
+	text-transform: uppercase;
+	color: #151516;
+	font-size: 16px;
+	font-family: 'HelveticaNeueCyr-Medium';
+}
+.logo .about-bye-all-news{
+	font-size: 30px;
+    margin-top: 35px;
+}
+.all-news-blue-wrp{
+	float: left;
+	width: 100%;
+}
+.all-news-blue-wrp h1{
+	float: left;
+	width: 100%;
+	text-align: left;
+	font-family: 'HelveticaNeueCyr-Medium';
+    font-size: 30px;
+    color: #599ab8;
+    margin: 20px auto;
+    margin-left: 35px;
+}
+.slider-of-news-big{
+	float: left;
+	width: 100%;
+	max-width: 100%;
+	margin: 10px 0;
+	padding: 0 15px;
+}
+.content-of-slide-all-news h5{
+	float: left;
+	width: 100%;
+	text-align: left;
+	text-transform: uppercase;
+	font-family: 'HelveticaNeueCyr-Light';
+	font-size: 14px;
+}
+.content-of-slide-all-news p{
+	text-align: left;
+	font-family: 'HelveticaNeueCyr-Bold';
+	font-size: 10px;
+}
+.pad-n{
+	padding-left: 0;
+}
+.block-of-news-all-news{
+	padding-left: 15px;
+}
+.position-of-news-all-news{
+	float: left;
+	width: 50%;
+	margin-bottom: 25px;
+}
+.aside-right-all-news{
+	float: right;
+	width: auto;
+}
+.aside-body-all-news{
+	float: left;
+	width: 100%;
+	background-color: #FFF;
+	padding: 10px 20px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.item-of-aside{
+	margin-bottom: 25px;
+}
+
+
+
+
 @media (max-width: 1199px) {
 	.container{
 		width: 970px;
@@ -741,6 +865,8 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 		top: 75px;
 		left: 0;
 	}
+	
+
 
 }
 @media (max-width: 991px) {
@@ -927,8 +1053,4 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	.wrp-to-logo{
 		top: 196px;
 	}
-}
-.error{
-	float: left;
-	width: 100%;
 }

@@ -44,7 +44,7 @@ $this->title = 'Госзакупки: ФЗ-44, ФЗ-223, ФЗ-94, государ
                                     <span><?php echo \Yii::$app->formatter->asDatetime($record->date, "php:d/m/Y");?></span>
                                     <h4><?php echo $record->cat;?></h4>
                                     <h3><?php echo $record->title;?></h3>
-                                    <p><?php echo \yii\helpers\StringHelper::truncate($record->annotation, 100, '...'); ?></p>
+                                    <p><?php echo \yii\helpers\StringHelper::truncateWords($record->annotation, 7, ''); ?></p>
                                 </div>
                             </a>
                         </div>

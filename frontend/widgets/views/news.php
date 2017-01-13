@@ -7,7 +7,7 @@ foreach ($news as $new){
                 <li>
                     <span><?php echo date('d.m.Y H:i', strtotime($new['date']));?></span>
                     <h5>/ <?php echo $new['title']?></h5>
-                    <p><?php echo \yii\helpers\StringHelper::truncate($new['annotation'], 100, '...'); ?></p>
+                    <p><?php echo \yii\helpers\StringHelper::truncateWords($new['annotation'], 10, '...'); ?></p>
                 </li>
             </ul>
         </a>

@@ -17,7 +17,9 @@ class AppAsset extends AssetBundle
         "css/slick.css",
         "css/jquery.formstyler.css",
         "css/bootstrap.css",
-        "css/style.css"
+        "css/style.css",
+        "css/style-one-news.css",
+        "css/style-media-all-news.css"
     ];
     public $js = [
         "js/jquery-3.1.0.min.js",

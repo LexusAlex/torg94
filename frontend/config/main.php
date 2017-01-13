@@ -49,7 +49,7 @@ return [
                     'route' => 'news/views',
                     'suffix' => '.html',
                 ],
-                //'news/all'=> 'news/index',
+                'news/all'=> 'news/index',
             ],
         ],
 
