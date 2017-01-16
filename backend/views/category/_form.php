@@ -13,7 +13,7 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
-    <?= $form->field($model, 'last_record_id')->dropDownList(\backend\models\Record::find()->select(['id'])->where(['status'=>1,'tid'=>2])->orderBy('id DESC')->limit(100)->indexBy('id')->column())->hint('Тип публикации <br> При выборе типа Статья можно выбрать категорию'); ?>
+    <?= $form->field($model, 'last_record_id')->dropDownList(\backend\models\Record::find()->select(['id','title'])->where(['status'=>1,'tid'=>2])->orderBy('id DESC')->limit(100)->indexBy('id')->column())->hint('Последняя статья в категории'); ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

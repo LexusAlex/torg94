@@ -11,14 +11,7 @@ class NewsController extends \yii\web\Controller
     public function actionIndex()
     {
         $this->layout = 'allNews';
-        \Yii::$container->set('yii\widgets\LinkPager', [
-            'registerLinkTags'=> true,
-            'firstPageLabel' => 'Первая',
-            'lastPageLabel' => 'Последняя',
-            'nextPageLabel' => 'Следующая',
-            'prevPageLabel' => 'Предыдущая',
-            //'maxButtonCount' => 5,
-        ]);
+
         $records = Record::find()->andWhere(['status'=>1,'tid'=>1])->with(['t'])->orderBy('date DESC');
         $dataProvider = new ActiveDataProvider([
             'query' => $records,

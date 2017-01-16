@@ -95,9 +95,16 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'annotation:ntext',
             // 'text:ntext',
             // 'type',
-
+            [
+                'label' => 'Категории',
+                'format' => 'html',
+                'value'=>function($data){
+                    return implode('<br>', \yii\helpers\ArrayHelper::map($data->categories, 'id', 'name'));
+                },
+                'visible'=> (Yii::$app->request->get('RecordSearch')['tid'] == 2) ? true : false
+            ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
-    ]); ?>
+    ]);?>
     <?php Pjax::end(); ?>
 </div>

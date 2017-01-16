@@ -34,10 +34,10 @@ AppAsset::register($this);
             <div class="content">
                 <div class="header-menu">
                     <ul>
-                        <li><a href="">Заказчику</a></li>
-                        <li><a href="">Поставщику</a></li>
-                        <li><a href="">44-ФЗ</a></li>
-                        <li><a href="">223-ФЗ</a></li>
+                        <li><a href="<?php echo \yii\helpers\Url::to(['articles/customers']);?>">Заказчику</a></li>
+                        <li><a href="<?php echo \yii\helpers\Url::to(['articles/suppliers']);?>">Поставщику</a></li>
+                        <li><a href="<?php echo \yii\helpers\Url::to(['articles/44fz']);?>">44-ФЗ</a></li>
+                        <li><a href="<?php echo \yii\helpers\Url::to(['articles/223fz']);?>">223-ФЗ</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,13 +49,13 @@ AppAsset::register($this);
             <div class="aside-menu">
                 <button class="open_menu"><i class="fa fa-bars" aria-hidden="true" id="button-follow"></i></button>
                 <ul id="fix-menu">
-                    <li><a href="">ЗАКУПКИ</a></li>
-                    <li><a href="">СЕРВИСЫ</a></li>
-                    <li><a href="">ЗАКОН</a></li>
-                    <li><a href="">В МИРЕ</a></li>
-                    <li><a href="">АНАЛИТИКА</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/purchase']);?>">ЗАКУПКИ</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/services']);?>">СЕРВИСЫ</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/law']);?>">ЗАКОН</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/world']);?>">В МИРЕ</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/analytics']);?>">АНАЛИТИКА</a></li>
                     <li><a href="">ИНФОГРАФИКА</a></li>
-                    <li><a href="">МЕРОПРИЯТИЯ</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/events']);?>">МЕРОПРИЯТИЯ</a></li>
                     <li><a href="" class="no-bor-b">СПЕЦПРОЕКТЫ</a></li>
                 </ul>
             </div>

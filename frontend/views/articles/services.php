@@ -1,11 +1,11 @@
 <?php
-$this->title = 'Все новости';
-$this->registerMetaTag(['name' => 'description','content' => 'Госзакупки: ФЗ-44, ФЗ-223, ФЗ-94, государственные закупки, электронные торги и открытый конкурс для госзаказа - Все новости']);
+$this->title = 'Все статьи в категории Сервисы';
+$this->registerMetaTag(['name' => 'description','content' => 'Госзакупки: ФЗ-44, ФЗ-223, ФЗ-94, государственные закупки, электронные торги и открытый конкурс для госзаказа - Все статьи']);
 ?>
 <div class="container-news">
     <div class="all-news-blue-wrp">
         <div class="container-news">
-            <h1>Все новости</h1>
+            <h1>Все статьи в категории Сервисы</h1>
         </div>
     </div>
     <div class="col-lg-10 pad-n col-md-12">
@@ -16,7 +16,7 @@ $this->registerMetaTag(['name' => 'description','content' => 'Госзакупк
 
             echo \yii\widgets\ListView::widget([
                 'dataProvider' => $dataProvider,
-                'itemView' => '@frontend/views/news/_records',
+                'itemView' => '@frontend/views/articles/_records',
                 //'summary' => '<div>Показано {count} из {totalCount} Страница {page} из {pageCount}</div>',
                 'summary' => false,
                 'summaryOptions' => [

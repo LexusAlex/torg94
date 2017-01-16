@@ -50,7 +50,7 @@ $this->title = 'Госзакупки: ФЗ-44, ФЗ-223, ФЗ-94, государ
                         </div>
                 </div>
                 <?php } ?>
-                <a href="" class="all-news">Все статьи</a>
+                <a href="<?php echo \yii\helpers\Url::to(['articles/index']);?>" class="all-news">Все статьи</a>
             </div>
             <div class="special-project">
                 <h4>спецпроекты</h4>
