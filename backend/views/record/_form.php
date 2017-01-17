@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use dosamigos\fileupload\FileUploadUI;
 use mihaildev\ckeditor\CKEditor;
+use mihaildev\elfinder\ElFinder;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Record */
@@ -83,17 +84,11 @@ use mihaildev\ckeditor\CKEditor;
     <?php
 
     echo $form->field($model, 'annotation')->widget(CKEditor::className(),[
-        'editorOptions' => [
-            'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
-            'inline' => false, //по умолчанию false
-        ],
+        'editorOptions' => ElFinder::ckeditorOptions(['elfinder'], ['preset' => 'standart', 'inline' => false]),
     ])->hint('Аннотация к публикации');
 
     echo $form->field($model, 'text')->widget(CKEditor::className(),[
-        'editorOptions' => [
-            'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
-            'inline' => false, //по умолчанию false
-        ],
+        'editorOptions' => ElFinder::ckeditorOptions(['elfinder'], ['preset' => 'standart', 'inline' => false]),
     ])->hint('Текст публикации');
     ?>
 
