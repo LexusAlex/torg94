@@ -49,9 +49,9 @@ AppAsset::register($this);
                     <li><a href="<?php echo \yii\helpers\Url::to(['articles/law']);?>">ЗАКОН</a></li>
                     <li><a href="<?php echo \yii\helpers\Url::to(['articles/world']);?>">В МИРЕ</a></li>
                     <li><a href="<?php echo \yii\helpers\Url::to(['articles/analytics']);?>">АНАЛИТИКА</a></li>
-                    <li><a href="">ИНФОГРАФИКА</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['site/infographics']);?>">ИНФОГРАФИКА</a></li>
                     <li><a href="<?php echo \yii\helpers\Url::to(['articles/events']);?>">МЕРОПРИЯТИЯ</a></li>
-                    <li><a href="" class="no-bor-b">СПЕЦПРОЕКТЫ</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['specprojects/all']);?>" class="no-bor-b">СПЕЦПРОЕКТЫ</a></li>
                 </ul>
             </div>
         </div>
@@ -88,86 +88,34 @@ AppAsset::register($this);
             <?= $content ?>
             <div class="container pad-n">
                 <div class="col-lg-10 pad-n">
-                    <div class="slider-of-news-big">
-                        <div class="content-of-slide content-of-slide-all-news">
-                            <?php echo \yii\helpers\Html::img(['/img/ava-news.png']);?>
-                            <h5>Заголовок</h5>
-                            <p>Министерство УФАС: антимонопольщики показали</p>
-                        </div>
-                        <div class="content-of-slide content-of-slide-all-news">
-                            <?php echo \yii\helpers\Html::img(['/img/ava-news.png']);?>
-                            <h5>Заголовок</h5>
-                            <p>Министерство УФАС: антимонопольщики показали</p>
-                        </div>
-                        <div class="content-of-slide content-of-slide-all-news">
-                            <?php echo \yii\helpers\Html::img(['/img/ava-news.png']);?>
-                            <h5>Заголовок</h5>
-                            <p>Министерство УФАС: антимонопольщики показали</p>
-                        </div>
-                        <div class="content-of-slide content-of-slide-all-news">
-                            <?php echo \yii\helpers\Html::img(['/img/ava-news.png']);?>
-                            <h5>Заголовок</h5>
-                            <p>Министерство УФАС: антимонопольщики показали</p>
-                        </div>
-                        <div class="content-of-slide content-of-slide-all-news">
-                            <?php echo \yii\helpers\Html::img(['/img/ava-news.png']);?>
-                            <h5>Заголовок</h5>
-                            <p>Министерство УФАС: антимонопольщики показали</p>
-                        </div>
-                        <div class="content-of-slide content-of-slide-all-news">
-                            <?php echo \yii\helpers\Html::img(['/img/ava-news.png']);?>
-                            <h5>Заголовок</h5>
-                            <p>Министерство УФАС: антимонопольщики показали</p>
-                        </div>
-                        <div class="content-of-slide content-of-slide-all-news">
-                            <?php echo \yii\helpers\Html::img(['/img/ava-news.png']);?>
-                            <h5>Заголовок</h5>
-                            <p>Министерство УФАС: антимонопольщики показали</p>
-                        </div>
-                        <div class="content-of-slide content-of-slide-all-news">
-                            <?php echo \yii\helpers\Html::img(['/img/ava-news.png']);?>
-                            <h5>Заголовок</h5>
-                            <p>Министерство УФАС: антимонопольщики показали</p>
-                        </div>
-                        <div class="content-of-slide content-of-slide-all-news">
-                            <?php echo \yii\helpers\Html::img(['/img/ava-news.png']);?>
-                            <h5>Заголовок</h5>
-                            <p>Министерство УФАС: антимонопольщики показали</p>
-                        </div>
-                        <div class="content-of-slide content-of-slide-all-news">
-                            <?php echo \yii\helpers\Html::img(['/img/ava-news.png']);?>
-                            <h5>Заголовок</h5>
-                            <p>Министерство УФАС: антимонопольщики показали</p>
-                        </div>
-
-                    </div>
+                    <?= \frontend\widgets\Specprojects::widget(); ?>
                     <div class="special-project">
                         <h4>Наши партнеры</h4>
                     </div>
                     <div class="partners">
                         <div class="col-lg-2 col-lg-offset-1 col-md-2  col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-offset-1 col-xs-2">
                             <div class="partner-item">
-                                <a href=""><?php echo \yii\helpers\Html::img(['/img/rbk.png']);?></a>
+                                <a href="http://www.rbc.ru/"><?php echo \yii\helpers\Html::img(['/img/rbk.png']);?></a>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-2  col-sm-2 col-xs-2">
                             <div class="partner-item">
-                                <a href=""><?php echo \yii\helpers\Html::img(['/img/ria.png']);?></a>
+                                <a href="http://www.ria.ru/"><?php echo \yii\helpers\Html::img(['/img/ria.png']);?></a>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                             <div class="partner-item">
-                                <a href=""><?php echo \yii\helpers\Html::img(['/img/itar.png']);?></a>
+                                <a href="http://tass.ru/"><?php echo \yii\helpers\Html::img(['/img/itar.png']);?></a>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                             <div class="partner-item">
-                                <a href=""><?php echo \yii\helpers\Html::img(['/img/tacc.png'],['class'=>'imgsize']);?></a>
+                                <a href="http://tass.ru/"><?php echo \yii\helpers\Html::img(['/img/tacc.png'],['class'=>'imgsize']);?></a>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                             <div class="partner-item">
-                                <a href=""><?php echo \yii\helpers\Html::img(['/img/rg.png']);?></a>
+                                <a href="https://rg.ru/"><?php echo \yii\helpers\Html::img(['/img/rg.png']);?></a>
                             </div>
                         </div>
                     </div>
@@ -181,9 +129,9 @@ AppAsset::register($this);
         <div class="container">
             <div class="social">
                 <span>СЛЕДИТЕ ЗА НОВОСТЯМИ:</span>
-                <a href=""><?php echo \yii\helpers\Html::img(['/img/mail.png'],['width'=>'25','height'=>'25']);?></a>
-                <a href=""><?php echo \yii\helpers\Html::img(['/img/fb.png'],['width'=>'25','height'=>'25']);?></a>
-                <a href=""><?php echo \yii\helpers\Html::img(['/img/twitter.png'],['width'=>'25','height'=>'25']);?></a>
+                <a href="<?php echo \yii\helpers\Url::to('site/subscribe');?>"><?php echo \yii\helpers\Html::img(['/img/mail.png'],['width'=>'25','height'=>'25']);?></a>
+                <a href="https://www.facebook.com/pages/Torg94ru-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%B8-%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8-%D0%BE-%D0%B3%D0%BE%D1%81%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B0%D1%85-%D0%AD%D0%A6%D0%9F-%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D1%85-%D1%82%D0%BE%D1%80%D0%B3%D0%B0%D1%85/179865092066104?sk=wall"><?php echo \yii\helpers\Html::img(['/img/fb.png'],['width'=>'25','height'=>'25']);?></a>
+                <a href="https://twitter.com/torg94"><?php echo \yii\helpers\Html::img(['/img/twitter.png'],['width'=>'25','height'=>'25']);?></a>
                 <!--<a href=""><img src="img/rss.png" alt="" width="25" height="25"></a>-->
             </div>
             <div class="sitemap">

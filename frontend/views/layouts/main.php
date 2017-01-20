@@ -54,9 +54,9 @@ AppAsset::register($this);
                     <li><a href="<?php echo \yii\helpers\Url::to(['articles/law']);?>">ЗАКОН</a></li>
                     <li><a href="<?php echo \yii\helpers\Url::to(['articles/world']);?>">В МИРЕ</a></li>
                     <li><a href="<?php echo \yii\helpers\Url::to(['articles/analytics']);?>">АНАЛИТИКА</a></li>
-                    <li><a href="">ИНФОГРАФИКА</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['site/infographics']);?>">ИНФОГРАФИКА</a></li>
                     <li><a href="<?php echo \yii\helpers\Url::to(['articles/events']);?>">МЕРОПРИЯТИЯ</a></li>
-                    <li><a href="" class="no-bor-b">СПЕЦПРОЕКТЫ</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['specprojects/all']);?>" class="no-bor-b">СПЕЦПРОЕКТЫ</a></li>
                 </ul>
             </div>
         </aside>
@@ -101,10 +101,10 @@ AppAsset::register($this);
         <div class="container">
             <div class="social">
                 <span>СЛЕДИТЕ ЗА НОВОСТЯМИ:</span>
-                <a href=""><img src="img/mail.png" alt="" width="25" height="25"></a>
-                <a href=""><img src="img/fb.png" alt="" width="25" height="25"></a>
-                <a href=""><img src="img/twitter.png" alt="" width="25" height="25"></a>
-                <a href=""><img src="img/rss.png" alt="" width="25" height="25"></a>
+                <a href="<?php echo \yii\helpers\Url::to('site/subscribe');?>"><?php echo \yii\helpers\Html::img(['/img/mail.png'],['width'=>'25','height'=>'25']);?></a>
+                <a href="https://www.facebook.com/pages/Torg94ru-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%B8-%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8-%D0%BE-%D0%B3%D0%BE%D1%81%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B0%D1%85-%D0%AD%D0%A6%D0%9F-%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D1%85-%D1%82%D0%BE%D1%80%D0%B3%D0%B0%D1%85/179865092066104?sk=wall"><?php echo \yii\helpers\Html::img(['/img/fb.png'],['width'=>'25','height'=>'25']);?></a>
+                <a href="https://twitter.com/torg94"><?php echo \yii\helpers\Html::img(['/img/twitter.png'],['width'=>'25','height'=>'25']);?></a>
+                <!--<a href=""><img src="img/rss.png" alt="" width="25" height="25"></a>-->
             </div>
             <div class="sitemap">
                 <a href="">| КАРТА САЙТА |</a>

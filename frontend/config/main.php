@@ -56,6 +56,12 @@ return [
                     'suffix' => '.html',
                 ],
                 'articles/all'=> 'articles/index',
+                [
+                    'pattern' => 'specproject/<id:\d{1,4}>',
+                    'route' => 'specprojects/views',
+                    'suffix' => '.html',
+                ],
+                'specprojects/all'=> 'specprojects/index',
                 'customers'=> 'articles/customers',
                 'suppliers'=> 'articles/suppliers',
                 '44fz'=> 'articles/44fz',
@@ -66,6 +72,7 @@ return [
                 'world'=> 'articles/world',
                 'analytics'=> 'articles/analytics',
                 'events'=> 'articles/events',
+                'infographics'=> 'site/infographics',
             ],
         ],
 

@@ -31,6 +31,43 @@ record_category - Связь категорий и статей
 Генератор паролей когда нужно сгенерировать
 auth_key Yii::$app->security->generateRandomString();
 pssword Yii::$app->security->generatePasswordHash($password)
+
+
+$s = array(
+            array('email' => 'alexsey_89@bk.ru','status' => '1')
+        );
+
+        $p = array_pad($s,100,['email' => 'alexsey_89@bk.ru','status' => '1']);
+        //var_dump($p);
+        foreach ($p as $v) {
+            /*$email = (string)$v['email'];
+            $status = (int)$v['status'];
+            $customer = new Subscribe();
+            $customer->email = $email;
+            $customer->status = $status;
+            $customer->insert();*/
+        }
+        /*Yii::$app->mailer->compose()
+            ->setFrom('lexuss1989@yandex.ru')
+            ->setTo('alexsey_89@bk.ru')
+            ->setSubject('Тема сообщения')
+            ->setTextBody('Текст сообщения')
+            ->setHtmlBody('<b>текст сообщения в формате HTML</b>')
+            ->send();*/
+
+
+        $users = Subscribe::find()->where('status = 1')->all();
+
+        $messages = [];
+        foreach ($users as $user) {
+            $messages[] = Yii::$app->mailer->compose()
+                ->setFrom('lexuss1989@yandex.ru')
+                ->setTo($user->email)
+                ->setSubject('Тема сообщения')
+                ->setTextBody($user->status)
+                ->setHtmlBody('<b>текст сообщения в формате HTML</b>');
+        }
+        Yii::$app->mailer->sendMultiple($messages);
 =======
 Порядок развертывания на 22 дек 2016
 1. Актуальная база а именно одна таблица NA_news(record) скачать используя параметры только данные формат zip только после распаковки размер должен быть ~40мб
@@ -45,6 +82,7 @@ pssword Yii::$app->security->generatePasswordHash($password)
 7. Скопировать все изображения со старого сайта
 8. Удалить и заменить на новые изображения, добавить в гит
 9. Добавить вручную пользователя для авторизации на сайте
+10. Залить дамп емайлов для рассылки в таблицу subscribe
 
 Повторный деплой - полный
 1. включить ssh
@@ -87,3 +125,6 @@ Backend and Frontend
 
 #12 - Правка багов - 30 мин
 #13 - Отображние новостей - 4.00
+#14 - Создание страниц категорий - 2.00
+#15 - Загрузка файлов из формы - 0.30
+#16 - Раздел со спецпроектами и таблица для рассылки новостей -

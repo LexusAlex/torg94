@@ -64,6 +64,8 @@ $this->params['breadcrumbs'][] = $this->title;
                         $res = 'Статьи';
                     } elseif ($data->tid == 3) {
                         $res = 'Законы';
+                    } elseif ($data->tid == 9) {
+                        $res = 'Спецпроекты';
                     } else {
                         $res = '';
                     }

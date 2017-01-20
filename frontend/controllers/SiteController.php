@@ -170,6 +170,21 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionInfographics() {
+
+        $this->layout = 'graphics';
+
+        $newNews = Record::find()
+            ->select(['*'])
+            ->andWhere(['status'=>1,'tid'=>1])
+            //->andWhere(['!=','id',$id])
+            ->orderBy('id DESC')
+            ->limit(2)
+            ->all();
+
+        return $this->render('infographics',['newNews'=>$newNews]);
+    }
+
     /**
      * Requests password reset.
      *

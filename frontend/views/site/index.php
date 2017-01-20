@@ -55,55 +55,34 @@ $this->title = 'Госзакупки: ФЗ-44, ФЗ-223, ФЗ-94, государ
             <div class="special-project">
                 <h4>спецпроекты</h4>
             </div>
-            <div class="slider-of-news">
-                <div class="content-of-slide">
-                    <img src="img/first-slide.png" alt="">
-                    <p>Министерство УФАС: антимонопольщики показали, как получить новый автомобиль и не нарушить закон о госзакупках</p>
-                </div>
-                <div class="content-of-slide">
-                    <img src="img/ava-news.png" alt="">
-                    <p>Министерство УФАС: антимонопольщики показали, как получить новый автомобиль и не нарушить закон о госзакупках</p>
-                </div>
-                <div class="content-of-slide">
-                    <img src="img/first-slide.png" alt="">
-                    <p>Министерство УФАС: антимонопольщики показали, как получить новый автомобиль и не нарушить закон о госзакупках</p>
-                </div>
-                <div class="content-of-slide">
-                    <img src="img/ava-news.png" alt="">
-                    <p>Министерство УФАС: антимонопольщики показали, как получить новый автомобиль и не нарушить закон о госзакупках</p>
-                </div>
-                <div class="content-of-slide">
-                    <img src="img/first-slide.png" alt="">
-                    <p>Министерство УФАС: антимонопольщики показали, как получить новый автомобиль и не нарушить закон о госзакупках</p>
-                </div>
-            </div>
+            <?= \frontend\widgets\Specprojects::widget(); ?>
             <div class="special-project">
                 <h4>Наши партнеры</h4>
             </div>
             <div class="partners">
                 <div class="col-lg-2 col-lg-offset-1 col-md-2  col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-offset-1 col-xs-2">
                     <div class="partner-item">
-                        <a href=""><img src="img/rbk.png" alt=""></a>
+                        <a href="http://www.rbc.ru/"><?php echo \yii\helpers\Html::img(['/img/rbk.png']);?></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-2  col-sm-2 col-xs-2">
                     <div class="partner-item">
-                        <a href=""><img src="img/ria.png" alt=""></a>
+                        <a href="http://www.ria.ru/"><?php echo \yii\helpers\Html::img(['/img/ria.png']);?></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                     <div class="partner-item">
-                        <a href=""><img src="img/itar.png" alt=""></a>
+                        <a href="http://tass.ru/"><?php echo \yii\helpers\Html::img(['/img/itar.png']);?></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                     <div class="partner-item">
-                        <a href=""><img src="img/tacc.png" alt="" class="imgsize"></a>
+                        <a href="http://tass.ru/"><?php echo \yii\helpers\Html::img(['/img/tacc.png'],['class'=>'imgsize']);?></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                     <div class="partner-item">
-                        <a href=""><img src="img/rg.png" alt=""></a>
+                        <a href="https://rg.ru/"><?php echo \yii\helpers\Html::img(['/img/rg.png']);?></a>
                     </div>
                 </div>
             </div>
