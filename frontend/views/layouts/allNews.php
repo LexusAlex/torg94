@@ -69,7 +69,7 @@ AppAsset::register($this);
                         </div>
                     </div>
                     <div class="subscription">
-                        <a href="">подписаться</a>
+                        <a href="<?php echo \yii\helpers\Url::to(['site/subscribe']);?>">подписаться</a>
                     </div>
                 </div>
             </div>

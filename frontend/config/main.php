@@ -73,6 +73,8 @@ return [
                 'analytics'=> 'articles/analytics',
                 'events'=> 'articles/events',
                 'infographics'=> 'site/infographics',
+                'subscribe'=> 'site/subscribe',
+                'unsubscribe'=> 'site/unsubscribe',
             ],
         ],
 

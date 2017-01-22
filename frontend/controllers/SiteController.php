@@ -3,6 +3,8 @@ namespace frontend\controllers;
 
 use backend\models\Category;
 use backend\models\Record;
+use backend\models\Subscribe;
+use frontend\models\SubscribeForm;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\helpers\VarDumper;
@@ -183,6 +185,44 @@ class SiteController extends Controller
             ->all();
 
         return $this->render('infographics',['newNews'=>$newNews]);
+    }
+
+    public function actionSubscribe()
+    {
+        $model = new SubscribeForm();
+        $subscribe = new Subscribe();
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            $subscribe->email = Yii::$app->request->post('SubscribeForm')['email'];
+            $subscribe->status = 1;
+            $subscribe->save();
+            Yii::$app->session->setFlash('success', 'Вы были успешно подписаны');
+            return $this->render('subscribe',['model'=> $model,]);
+        } else {
+            return $this->render('subscribe',['model'=> $model,]);
+        }
+
+    }
+
+    public function actionUnsubscribe()
+    {
+        $model = new SubscribeForm();
+        $subscribe = new Subscribe();
+        if ($model->load(Yii::$app->request->post())) {
+                $email = Subscribe::find()->where(['email'=>Yii::$app->request->post('SubscribeForm')['email']])->one();
+            if (!empty($email)) {
+                $email->delete();
+                Yii::$app->session->setFlash('success', 'Вы были успешно отписаны');
+                return $this->render('unsubscribe',['model'=> $model,]);
+            } else {
+                Yii::$app->session->setFlash('danger', 'Ваш email не существует');
+                return $this->render('unsubscribe',['model'=> $model,]);
+            }
+
+            //return $this->redirect(['site/index']);
+        } else {
+            return $this->render('unsubscribe',['model'=> $model,]);
+        }
+
     }
 
     /**

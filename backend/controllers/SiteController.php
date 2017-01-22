@@ -1,6 +1,8 @@
 <?php
 namespace backend\controllers;
 
+use backend\models\Subscribe;
+use backend\models\SubscribeForm;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -26,7 +28,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index','information'],
+                        'actions' => ['logout', 'index','information','subscribe'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -85,6 +87,29 @@ class SiteController extends Controller
         }
     }
 
+    public function actionSubscribe()
+    {
+        $model = new SubscribeForm();
+        $count = Subscribe::find()->where('status = 1')->count();
+        $mail = Subscribe::find()->where('status = 1')->all();
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            $messages = [];
+            foreach ($mail as $user) {
+                $messages[] = Yii::$app->mailer->compose()
+                    ->setFrom(['' => Yii::$app->request->post('SubscribeForm')['name']])
+                    ->setTo($user->email)
+                    ->setSubject(Yii::$app->request->post('SubscribeForm')['subject'])
+                    //->setTextBody('Текст сообщения')
+                    ->setHtmlBody(Yii::$app->request->post('SubscribeForm')['htmlBody']);
+            }
+            Yii::$app->mailer->sendMultiple($messages);
+            //return $this->render('subscribe',['model'=> $model, 'count'=>$count]);
+            return $this->redirect(['site/index']);
+        } else {
+            return $this->render('subscribe',['model'=> $model, 'count'=>$count]);
+        }
+
+    }
     /**
      * Logout action.
      *
