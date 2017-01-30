@@ -12,7 +12,7 @@ class NewsController extends \yii\web\Controller
     {
         $this->layout = 'allNews';
 
-        $records = Record::find()->andWhere(['status'=>1,'tid'=>1])->with(['t'])->orderBy('date DESC');
+        $records = Record::find()->andWhere(['status'=>1,'tid'=>1])->andWhere('date <= NOW()')->with(['t'])->orderBy('date DESC');
         $dataProvider = new ActiveDataProvider([
             'query' => $records,
             'pagination' => [
@@ -25,6 +25,7 @@ class NewsController extends \yii\web\Controller
         $newNews = Record::find()
             ->select(['*'])
             ->andWhere(['status'=>1,'tid'=>1])
+            ->andWhere('date <= NOW()')
             //->andWhere(['!=','id',$id])
             ->orderBy('id DESC')
             ->limit(2)
@@ -39,12 +40,13 @@ class NewsController extends \yii\web\Controller
 
         $model = Record::find()
             ->select(['*'])
-            ->andWhere(['id'=>$id,'status'=>1,'tid'=>1])
+            ->andWhere(['id'=>$id,'status'=>1,'tid'=>1])->andWhere('date <= NOW()')
             ->one();
 
         $newNews = Record::find()
             ->select(['*'])
             ->andWhere(['status'=>1,'tid'=>1])
+            ->andWhere('date <= NOW()')
             ->andWhere(['!=','id',$id])
             ->orderBy('id DESC')
             ->limit(4)

@@ -30,7 +30,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'title:html',
-            'date:datetime',
+            //'date:datetime',
+            [
+                'attribute'=>'date',
+                'value' => date("d.m.Y H:i:s", strtotime($model->date)),
+                //'format' => ['datetime', 'php:d F Y G:i:s']
+            ],
             //'archive',
             'status',
             'author',
