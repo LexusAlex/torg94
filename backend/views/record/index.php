@@ -34,7 +34,13 @@ $this->params['breadcrumbs'][] = $this->title;
                     return \yii\helpers\StringHelper::truncate($data->title, 80,'...');
                 },
             ],
-            'date:datetime',
+            [
+                'attribute'=>'date',
+                'content' => function($data){
+                    return date("d-m-Y H:i:s", strtotime($data->date));
+                },
+                //'format' => ['datetime', 'php:d F Y G:i:s']
+            ],
             //'archive',
             [
                 'attribute' => 'status',
