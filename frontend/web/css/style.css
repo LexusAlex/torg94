@@ -368,15 +368,17 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	font-size: 12px;
 	color: #000;
 	margin-left: 10px;
+	line-height: 14px;
 }
 .only-info p{
 	float: left;
-	width: 100%;
+	width: 90%;
 	text-align: left;
 	font-family: 'HelveticaNeueCyr-Light';
 	color: #000;
 	font-size: 11px;
 	margin-left: 10px;
+	line-height: 13px;
 }
 .special-project{
 	float: left;
@@ -603,12 +605,13 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 }
 .asid-news a ul li p{
 	float: left;
-	width: 100%;
+	width: 92%;
 	color: #000;
 	margin-left: 3px;
 	font-size: 14px;
 	font-family: 'HelveticaNeueCyr-Light';
 	margin-left: 10px;
+	line-height: 15px;
 }
 .aside-menu .open_menu{
 		display: none;
