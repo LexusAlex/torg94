@@ -1,7 +1,7 @@
 <?php
-foreach ($news as $new){
+foreach ($news as $k=>$new){
 ?>
-    <div class="asid-news">
+    <div class="asid-news <?php if($k == 4){ echo 'last-news';}?>">
         <a href="<?php echo \yii\helpers\Url::to(['news/views', 'id' => $new['id']]);?>">
             <ul>
                 <li>
