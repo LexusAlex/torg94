@@ -1,6 +1,6 @@
 @arial: Arial, sans-serif;
-/* Cyber Genius 
-   ResetCSS v3.0 
+/* Cyber Genius
+   ResetCSS v3.0
    License: none
 */
 
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -34,7 +34,7 @@ body, html {
 	-ms-overflow-x: hidden;
 	    overflow-x: hidden !important;
 	font-family: 'R', @arial;
-	background-color: #EBE6D7;
+	background-color: #fbf3e4;
 }
 ul {
 	list-style-type: none;
@@ -114,7 +114,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	margin: 0 auto;
 	width: 100%;
 	max-width: 730px;
-	
+
 }
 .container{
 	position: relative;
@@ -135,13 +135,13 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	float: left;
 	width: 100%;
 	margin: 10px 0;
-	
+
 }
 .header-menu ul li{
 	float: left;
 	width: auto;
 	margin: 0 7%;
-	
+
 }
 .header-menu ul li a{
 	float: left;
@@ -169,7 +169,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 .time-s-date{
 	float: left;
 	width: 100%;
-	
+
 }
 .time-s-date span{
 	float: left;
@@ -516,7 +516,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 .aside-menu ul{
 	float: left;
 	width: 100%;
-	
+
 }
 .aside-menu ul li{
 	float: left;
@@ -574,7 +574,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 .aside-left h3 span{
 	font-size: 15px;
 	font-family: 'HelveticaNeueCyr-Thin';
-	
+
 }.asid-news a{
 	float: left;
 	width: auto;
@@ -637,7 +637,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	text-decoration: none;
 	text-align: center;
 	margin-bottom: 15px;
-	
+
 }
 .aside-left>a{
 	float: none;
@@ -782,7 +782,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	.container{
 		width: 970px;
 	}
-	
+
 	.aside-menu .open_menu{
 		display: block;
 	}
@@ -793,7 +793,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	}
 	.aside-menu ul{
 	display: none;
-	}	
+	}
 	.fa{
 		font-size: 23px;
 		margin-top: 5px;
@@ -873,7 +873,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 		top: 75px;
 		left: 0;
 	}
-	
+
 
 
 }
@@ -889,7 +889,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 		width: 30px;
 		height: 30px;
 	}
-	
+
 }
 
 @media (max-width: 767px) {
