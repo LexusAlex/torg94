@@ -212,10 +212,9 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	line-height: 17px;
 }
 .news-on-this-new{
-	float: left;
+	/*float: left;*/
 	width: 270px;
-	margin-top: 25px;
-	margin-right: 25px;
+	margin: 10px auto;
 }
 .news-on-this-new span{
 	float: left;
