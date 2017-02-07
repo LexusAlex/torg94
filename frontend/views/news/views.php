@@ -14,6 +14,9 @@ $this->registerMetaTag(['name' => 'description','content' => 'Госзакупк
 
                 <p><?php echo $model->annotation;?></p>
                 <div class="pluso go-to-networks" data-background="none;" data-options="medium,square,line,horizontal,counter,sepcounter=1,theme=14" data-services="facebook,twitter,vkontakte"></div>
+                <br>
+                <br>
+                <br>
                 <?php echo $model->text;?>
 
                 <div class="news-on-this-new">

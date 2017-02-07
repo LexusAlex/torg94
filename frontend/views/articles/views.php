@@ -10,10 +10,12 @@ $this->registerMetaTag(['name' => 'description','content' => 'Госзакупк
                 <span><?php echo Yii::$app->formatter->asDate($model->date, 'php:d/m/yy'); ?></span>
                 <span class="time-blue"><?php echo Yii::$app->formatter->asDate($model->date, 'php:h : i'); ?></span>
             </div>
-            <?php echo \yii\helpers\Html::img(['/upload/'.$model->picture_text]);?>
-
-            <p><?php echo $model->annotation;?></p>
             <div class="pluso go-to-networks" data-background="none;" data-options="medium,square,line,horizontal,counter,sepcounter=1,theme=14" data-services="facebook,twitter,vkontakte"></div>
+            <p><?php echo $model->annotation;?></p>
+            <?php echo \yii\helpers\Html::img(['/upload/'.$model->picture_text],['style'=>'width:100%']);?>
+
+
+
             <?php echo $model->text;?>
 
             <div class="news-on-this-new">
