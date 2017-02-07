@@ -211,6 +211,9 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	font-size: 17px;
 	line-height: 17px;
 }
+.wrp-to-one-new p a{
+	text-decoration: none;
+}
 .news-on-this-new{
 	/*float: left;*/
 	width: 270px;

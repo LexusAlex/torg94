@@ -739,14 +739,15 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	float: left;
 	width: 100%;
 	text-align: left;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	font-family: 'Helvetica';
 	font-size: 14px;
 }
 .content-of-slide-all-news p{
 	text-align: left;
-	font-family: 'HelveticaNeueCyr-Bold';
+	font-family: 'Helvetica';
 	font-size: 10px;
+	font-weight: bold;
 }
 .pad-n{
 	padding-left: 0;
