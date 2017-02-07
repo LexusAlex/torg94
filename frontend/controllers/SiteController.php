@@ -76,7 +76,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
 
-        $categories = Category::findAll([5,6,7,8,9,10]);
+        $categories = Category::find()->where('id in (5,6,7,8,9,10)')->orderBy('name desc')->all();
         $records = [];
         foreach ($categories as $id=>$item){
             $records[] = Record::find()->where(['id'=>$item->last_record_id])->with('categories')->one();

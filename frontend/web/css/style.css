@@ -637,6 +637,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	text-decoration: none;
 	text-align: center;
 	margin-bottom: 15px;
+	padding-top: 10px;
 
 }
 .aside-left>a{

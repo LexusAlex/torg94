@@ -7,8 +7,8 @@ $this->registerMetaTag(['name' => 'description','content' => 'Госзакупк
         <div class="wrp-to-one-new">
             <h2><?php echo $model->title;?></h2>
             <div class="time-one-news">
-                <span><?php echo Yii::$app->formatter->asDate($model->date, 'php:d/m/yy'); ?></span>
-                <span class="time-blue"><?php echo Yii::$app->formatter->asDate($model->date, 'php:h : i'); ?></span>
+                <span><?php echo date('d/m/Y', strtotime($model->date));?></span>
+                <span class="time-blue"><?php echo date('H : i', strtotime($model->date));?></span>
             </div>
             <div class="pluso go-to-networks" data-background="none;" data-options="medium,square,line,horizontal,counter,sepcounter=1,theme=14" data-services="facebook,twitter,vkontakte"></div>
             <p><?php echo $model->annotation;?></p>
