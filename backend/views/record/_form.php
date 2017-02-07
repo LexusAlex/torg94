@@ -63,7 +63,7 @@ use mihaildev\elfinder\ElFinder;
                     'accept' => 'image/*'
                 ],
                 'clientOptions' => [
-                    'maxFileSize' => 2000000
+                    'maxFileSize' => 200000000000
                 ],
                 // ...
                 'clientEvents' => [
