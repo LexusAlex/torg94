@@ -25,6 +25,20 @@ AppAsset::register($this);
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-22336537-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type =
+                    'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+                        'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
         <?php $this->head() ?>
     </head>
     <body>
@@ -136,6 +150,20 @@ AppAsset::register($this);
     -->
 
     <!-- /Modals -->
+    <noindex>
+        <!-- Yandex.Metrika counter -->
+        <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            try { var yaCounter1072868 = new Ya.Metrika({id:1072868,
+                webvisor:true,
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true});
+            } catch(e) { }
+        </script>
+        <noscript><div><img src="//mc.yandex.ru/watch/1072868" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+    </noindex>
     <?php $this->endBody() ?>
     </body>
     </html>

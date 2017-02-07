@@ -1,35 +1,32 @@
 <?php
-$this->title = $model->title;
-$this->registerMetaTag(['name' => 'description','content' => 'Госзакупки: ФЗ-44, ФЗ-223, ФЗ-94, государственные закупки, электронные торги и открытый конкурс для госзаказа - '.$model->title]);
+$this->title = 'Все статьи в категории 44-ФЗ';
+$this->registerMetaTag(['name' => 'description','content' => 'Госзакупки: ФЗ-44, ФЗ-223, ФЗ-94, государственные закупки, электронные торги и открытый конкурс для госзаказа - Все статьи']);
 ?>
 <div class="container-news">
-    <div class="col-lg-10 pad-n col-md-12 col-sm-12 col-xs-12">
-        <div class="wrp-to-one-new">
-            <h2><?php echo $model->title;?></h2>
-            <div class="time-one-news">
-                <span><?php echo Yii::$app->formatter->asDate($model->date, 'php:d/m/yy'); ?></span>
-                <span class="time-blue"><?php echo Yii::$app->formatter->asDate($model->date, 'php:h : i'); ?></span>
-            </div>
-            <?php echo \yii\helpers\Html::img(['/upload/'.$model->picture_text]);?>
+    <div class="all-news-blue-wrp">
+        <div class="container-news">
+            <h1>Все статьи в категории 44-ФЗ</h1>
+        </div>
+    </div>
+    <div class="col-lg-10 pad-n col-md-12">
+        <div class="block-of-news block-of-news-all-news">
+            <?php
+            /* @var $this yii\web\View */
 
-            <p><?php echo $model->annotation;?></p>
-            <div class="pluso go-to-networks" data-background="none;" data-options="medium,square,line,horizontal,counter,sepcounter=1,theme=14" data-services="facebook,twitter,vkontakte"></div>
-            <?php echo $model->text;?>
 
-            <div class="news-on-this-new">
-                <span>новости по теме</span>
-                <div class="slider-in-news-news">
-                    <?php foreach ($newNews as $news) { ?>
-                        <div class="content-of-slide content-of-slide-all-news">
-                            <?php echo \yii\helpers\Html::img(['/upload/'.$news->picture_text]);?>
-                            <h5><?php echo $news->title;?></h5>
-                            <p><?php echo \yii\helpers\StringHelper::truncateWords($news->annotation, 10, ''); ?></p>
-                        </div>
-                    <?php } ?>
-                </div>
-            </div>
-            <p class="after-slider-right"></p>
+            echo \yii\widgets\ListView::widget([
+                'dataProvider' => $dataProvider,
+                'itemView' => '@frontend/views/articles/_records',
+                //'summary' => '<div>Показано {count} из {totalCount} Страница {page} из {pageCount}</div>',
+                'summary' => false,
+                'summaryOptions' => [
+                    'tag' => 'span',
+                    'class' => 'my-summary'
+                ],
+                //'emptyText' => 'Список пуст',
+            ]);
 
+            ?>
         </div>
         <div class="special-project">
             <h4>спецпроекты</h4>

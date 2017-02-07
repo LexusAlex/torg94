@@ -111,23 +111,28 @@ class ArticlesController extends \yii\web\Controller
 
     public function action44fz()
     {
-        $this->layout = 'oneNews';
+        $this->layout = 'allNews';
 
-        $model = Record::find()->andWhere(['status'=>1,'tid'=>8])->orderBy('date DESC')->one();
+        $records = Category::findOne(3)->getRecords()->andWhere(['status'=>1,'tid'=>2])->orderBy('date DESC');
 
+        $dataProvider = new ActiveDataProvider([
+            'query' => $records,
+            'pagination' => [
+                'pageSize' => 6,
+                'pageSizeParam' => false,
+                'forcePageParam' => false,
+                //'route' => 'front/index'
+            ],
+        ]);
         $newNews = Record::find()
             ->select(['*'])
             ->andWhere(['status'=>1,'tid'=>2])
             //->andWhere(['!=','id',$id])
             ->orderBy('id DESC')
-            ->limit(4)
+            ->limit(2)
             ->all();
 
-        if ($model !== null) {
-            return $this->render('44fz',['model'=>$model,'newNews'=>$newNews]);
-        } else {
-            throw new NotFoundHttpException(\Yii::t('app', 'The requested article does not exist.'));
-        }
+        return $this->render('44fz',['dataProvider'=>$dataProvider,'newNews'=>$newNews]);
     }
 
     public function action223fz()
