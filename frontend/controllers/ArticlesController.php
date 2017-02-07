@@ -295,7 +295,7 @@ class ArticlesController extends \yii\web\Controller
     {
         $this->layout = 'allNews';
 
-        $records = Category::findOne(7)->getRecords()->andWhere(['status'=>1,'tid'=>2])->orderBy('date DESC');
+        $records = Category::findOne(11)->getRecords()->andWhere(['status'=>1,'tid'=>2])->orderBy('date DESC');
 
         $dataProvider = new ActiveDataProvider([
             'query' => $records,
