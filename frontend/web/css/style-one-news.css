@@ -21,7 +21,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	/*font: inherit;*/
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -198,7 +198,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 
 }
 .wrp-to-one-new img{
-	float: left;
+	/*float: left;*/
 	/*width: 100%;*/
 	margin-bottom: 15px;
 	margin-right: 14px;
