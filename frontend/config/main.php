@@ -61,7 +61,18 @@ return [
                     'route' => 'specprojects/views',
                     'suffix' => '.html',
                 ],
+                [
+                    'pattern' => 'uslugi/<id:\d{1,4}>',
+                    'route' => 'services/views',
+                    'suffix' => '.html',
+                ],
+                [
+                    'pattern' => 'zak/<id:\d{1,4}>',
+                    'route' => 'laws/views',
+                    'suffix' => '.html',
+                ],
                 'specprojects/all'=> 'specprojects/index',
+
                 'customers'=> 'articles/customers',
                 'suppliers'=> 'articles/suppliers',
                 '44fz'=> 'articles/44fz',
@@ -72,9 +83,16 @@ return [
                 'world'=> 'articles/world',
                 'analytics'=> 'articles/analytics',
                 'events'=> 'articles/events',
+
                 'infographics'=> 'site/infographics',
                 'subscribe'=> 'site/subscribe',
                 'unsubscribe'=> 'site/unsubscribe',
+
+                'news.php3' => 'news/index',
+                'stat.php3' => 'articles/index',
+                'zak.php3' => 'articles/index',
+                'uslugi.php3' => 'articles/index',
+                /*'cont.php3' => 'site/index'*/
             ],
         ],
 
