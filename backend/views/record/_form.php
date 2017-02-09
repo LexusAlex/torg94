@@ -40,7 +40,7 @@ use mihaildev\elfinder\ElFinder;
 
     <?php /*$form->field($model, 'archive')->textInput() */?>
 
-    <?= $form->field($model, 'status')->dropDownList([0 => 'Не опубликован', 1 => 'Опубликован', 2 => 'Черновик'])->hint('Статус публикации - по умолчанию Не опубликован <br> Для создания отложенной публикации выбрать Черновик');  ?>
+    <?= $form->field($model, 'status')->dropDownList([0 => 'Не опубликован', 1 => 'Опубликован', 2 => 'Черновик'])->hint('Статус публикации - по умолчанию Не опубликован');  ?>
 
 
     <?php echo $form->field($model, 'picture_text')->textInput(['maxlength' => true])->hint('Изображение - по умолчанию Null <br> Внимание! <br> Загружать по одному изображению <br> При обновлении проверить что путь до файла поменялся') ?>

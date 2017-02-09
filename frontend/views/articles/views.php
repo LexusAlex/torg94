@@ -5,16 +5,15 @@ $this->registerMetaTag(['name' => 'description','content' => 'Госзакупк
 <div class="container-news">
     <div class="col-lg-10 pad-n col-md-12 col-sm-12 col-xs-12">
         <div class="wrp-to-one-new">
+
             <h2><?php echo $model->title;?></h2>
             <div class="time-one-news">
                 <span><?php echo date('d/m/Y', strtotime($model->date));?></span>
                 <span class="time-blue"><?php echo date('H : i', strtotime($model->date));?></span>
             </div>
+            <?php echo \yii\helpers\Html::img(['/upload/'.$model->picture_text],['style'=>'float:left;width:35%']);?>
             <div class="pluso go-to-networks" data-background="none;" data-options="medium,square,line,horizontal,counter,sepcounter=1,theme=14" data-services="facebook,twitter,vkontakte"></div>
             <p><?php echo $model->annotation;?></p>
-            <?php echo \yii\helpers\Html::img(['/upload/'.$model->picture_text],['style'=>'width:100%']);?>
-
-
 
             <?php echo $model->text;?>
 
