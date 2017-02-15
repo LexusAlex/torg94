@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model backend\models\Record */
 
 $this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Records', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Публикации', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="record-view">
@@ -23,6 +23,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+        <?= Html::a('Создать публикацию', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Список публикаций', ['index'], ['class' => 'btn btn-primary']) ?>
+        <?php if($model->status === 1 && $model->tid === 1){ ?>
+            <a class="btn btn-primary" href="http://torg94.ru/news/<?php echo $model->id;?>.html" target="_blank"><?php echo Yii::t('app', 'Посмотреть на torg94.ru')?></a>
+        <?php } ?>
     </p>
 
     <?= DetailView::widget([

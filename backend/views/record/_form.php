@@ -14,7 +14,6 @@ use mihaildev\elfinder\ElFinder;
 <div class="record-form" style="margin: 0 auto;width: 70%">
     <div class="row">
         <div class="col-xs-6 col-xs-offset-3">
-            <em>Благодаря структуре старого сайта мы вынужнены ее придерживаться и здесь</em>
             <hr>
             <strong>Обязательные поля</strong>
             <ol>
@@ -32,7 +31,8 @@ use mihaildev\elfinder\ElFinder;
     <?= $form->field($model, 'date')->widget(\nkovacs\datetimepicker\DateTimePicker::className(), [
         'clientOptions' => [
             'extraFormats' => ['YYYY-MM-DD hh:mm:ss'],
-            'useCurrent' => true
+            'useCurrent' => true,
+            'defaultDate'=>date('Y-m-d H:i:s')
         ],
         'type' => 'datetime',
         'format' => 'yyyy-MM-dd HH:mm:ss',
@@ -40,10 +40,9 @@ use mihaildev\elfinder\ElFinder;
 
     <?php /*$form->field($model, 'archive')->textInput() */?>
 
-    <?= $form->field($model, 'status')->dropDownList([0 => 'Не опубликован', 1 => 'Опубликован', 2 => 'Черновик'])->hint('Статус публикации - по умолчанию Не опубликован');  ?>
+    <?= $form->field($model, 'status')->dropDownList([0 => 'Не опубликован',1 => 'Опубликован', 2 => 'Черновик'],['options' =>[ '1' => ['Selected' => true]]])->hint('Статус публикации - по умолчанию Опубликован');  ?>
 
-
-    <?php echo $form->field($model, 'picture_text')->textInput(['maxlength' => true])->hint('Изображение - по умолчанию Null <br> Внимание! <br> Загружать по одному изображению <br> При обновлении проверить что путь до файла поменялся') ?>
+    <?php echo $form->field($model, 'picture_text')->textInput(['maxlength' => true])->hint('Изображение - по умолчанию не задано <br> Загружать по одному изображению <br> При обновлении проверить что путь до файла поменялся') ?>
     <?php
 
     if(empty($model->picture_text)){
@@ -63,7 +62,8 @@ use mihaildev\elfinder\ElFinder;
                     'accept' => 'image/*'
                 ],
                 'clientOptions' => [
-                    'maxFileSize' => 200000000000
+                    'maxFileSize' => 200000000000,
+                    'autoUpload'=>true,
                 ],
                 // ...
                 'clientEvents' => [
