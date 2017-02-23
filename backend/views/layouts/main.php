@@ -37,6 +37,7 @@ AppAsset::register($this);
     $menuItems = [
         ['label' => 'На главную', 'url' => ['/site/index'],'visible' => !Yii::$app->user->isGuest],
         ['label' => 'Публикации', 'url' => ['/record/index'],'visible' => !Yii::$app->user->isGuest],
+        ['label' => 'Создать', 'url' => ['/record/create'],'visible' => !Yii::$app->user->isGuest],
         ['label' => 'Типы публикаций', 'url' => ['/type/index'],'visible' => !Yii::$app->user->isGuest],
         ['label' => 'Категории статей', 'url' => ['/category/index'],'visible' => !Yii::$app->user->isGuest],
         ['label' => 'Рассылка', 'url' => ['/site/subscribe'],'visible' => !Yii::$app->user->isGuest],
@@ -55,7 +56,7 @@ AppAsset::register($this);
             . '</li>';
     }
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'nav navbar-nav navbar-right'],
         'items' => $menuItems,
     ]);
     NavBar::end();

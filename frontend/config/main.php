@@ -45,29 +45,29 @@ return [
             'showScriptName' => false,
             'rules' => [
                 [
-                    'pattern' => 'news/<id:\d{1,4}>',
+                    'pattern' => 'news/<id:\d{1,5}>',
                     'route' => 'news/views',
                     'suffix' => '.html',
                 ],
                 'news/all'=> 'news/index',
                 [
-                    'pattern' => 'stat/<id:\d{1,4}>',
+                    'pattern' => 'stat/<id:\d{1,5}>',
                     'route' => 'articles/views',
                     'suffix' => '.html',
                 ],
                 'articles/all'=> 'articles/index',
                 [
-                    'pattern' => 'specproject/<id:\d{1,4}>',
+                    'pattern' => 'specproject/<id:\d{1,5}>',
                     'route' => 'specprojects/views',
                     'suffix' => '.html',
                 ],
                 [
-                    'pattern' => 'uslugi/<id:\d{1,4}>',
+                    'pattern' => 'uslugi/<id:\d{1,5}>',
                     'route' => 'services/views',
                     'suffix' => '.html',
                 ],
                 [
-                    'pattern' => 'zak/<id:\d{1,4}>',
+                    'pattern' => 'zak/<id:\d{1,5}>',
                     'route' => 'laws/views',
                     'suffix' => '.html',
                 ],

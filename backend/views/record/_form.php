@@ -25,7 +25,9 @@ use mihaildev\elfinder\ElFinder;
         </div>
     </div>
     <?php $form = ActiveForm::begin(); ?>
-
+    <div class="form-group">
+        <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Обновить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+    </div>
     <?= $form->field($model, 'title')->textInput(['maxlength' => true])->hint('Заголовок публикации до 255 символов'); ?>
 
     <?= $form->field($model, 'date')->widget(\nkovacs\datetimepicker\DateTimePicker::className(), [

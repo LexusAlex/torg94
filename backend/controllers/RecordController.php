@@ -90,6 +90,7 @@ class RecordController extends Controller
         $model = new Record();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            \Yii::$app->session->setFlash('success', 'Публикация <b>'.$model->title.'</b> успешно создана');
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -109,6 +110,7 @@ class RecordController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            \Yii::$app->session->setFlash('success', 'Публикация <b>'.$model->title.'</b> успешно обновлена');
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
@@ -126,7 +128,7 @@ class RecordController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-
+        \Yii::$app->session->setFlash('success', 'Публикация удалена');
         return $this->redirect(['index']);
     }
 
