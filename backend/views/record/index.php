@@ -59,6 +59,16 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             [
+                'label' => 'Изображение',
+                'format' => 'raw',
+                'value' => function($data){
+                    if (!empty($data->picture_text)){
+                        return Html::img(\yii\helpers\Url::to('/upload/'.$data->picture_text),['style' => 'width:75px;']);
+                    }
+                    return 'Изображение отсутствует';
+                },
+            ],
+            [
                 'attribute' => 'tid',
                 'filter' => \backend\models\Type::find()->select(['title', 'id'])->indexBy('id')->column(),
                 'value' => 'type.title',
