@@ -43,14 +43,14 @@ AppAsset::register($this);
             <div class="secondary-menu">
                 <button class="open_menu-all-news"><i class="fa fa-bars" aria-hidden="true" id="button-follow"></i></button>
                 <ul>
-                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/purchase']);?>">ЗАКУПКИ</a></li>
-                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/services']);?>">СЕРВИСЫ</a></li>
-                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/law']);?>">ЗАКОН</a></li>
-                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/world']);?>">В МИРЕ</a></li>
-                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/analytics']);?>">АНАЛИТИКА</a></li>
-                    <li><a href="<?php echo \yii\helpers\Url::to(['site/infographics']);?>">ИНФОГРАФИКА</a></li>
-                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/events']);?>">МЕРОПРИЯТИЯ</a></li>
-                    <li><a href="<?php echo \yii\helpers\Url::to(['specprojects/all']);?>" class="no-bor-b">СПЕЦПРОЕКТЫ</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/purchase']);?>">Закупки</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/services']);?>">Сервисы</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/law']);?>">Закон</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/world']);?>">В мире</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/analytics']);?>">Аналитика</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['site/infographics']);?>">Инфографика</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['articles/events']);?>">Мероприятия</a></li>
+                    <li><a href="<?php echo \yii\helpers\Url::to(['specprojects/all']);?>" class="no-bor-b">Спецпроекты</a></li>
                 </ul>
             </div>
         </div>
@@ -62,7 +62,7 @@ AppAsset::register($this);
                     <div class="col-lg-4">
                         <div class="time-s-date">
                             <span><?php echo date('d/m/Y');?></span>
-                            <span class="time"><?php echo date('H : i : s');?></span>
+                            <!--<span class="time"><?php /*echo date('H : i : s');*/?></span>-->
                         </div>
                     </div>
                     <div class="subscription">

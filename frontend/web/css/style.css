@@ -532,7 +532,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	padding: 10px 0;
 	text-align: left;
 	text-decoration: none;
-	text-transform: uppercase;
+	text-transform: none;
 	margin-left: 25px;
 }
 .aside-menu ul li a:hover{
@@ -705,7 +705,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 .secondary-menu ul li a{
 	float: left;
 	width: auto;
-	text-transform: uppercase;
+	text-transform: none;
 	color: #151516;
 	font-size: 16px;
 	font-family: 'HelveticaNeueCyr-Medium';

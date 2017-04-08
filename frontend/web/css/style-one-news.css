@@ -145,7 +145,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	width: 100%;
 	text-align: left;
 	color: #599ab8;
-	text-transform: uppercase;
+	text-transform: none;
 	font-size: 25px;
 	font-family: 'HelveticaNeueCyr-Medium';
 }
