@@ -39,7 +39,7 @@ $this->title = 'Госзакупки: ФЗ-44, ФЗ-223, ФЗ-94, государ
                     <div class="col-lg-6 pad-no col-md-6 col-sm-6 col-xs-12">
                         <div class="one-news-position">
                             <a href="<?php echo \yii\helpers\Url::to(['articles/views', 'id' => $record->id]);?>">
-                                <?php echo \yii\helpers\Html::img(['/upload/'.$record->picture_text]);?>
+                                <?php echo \yii\helpers\Html::img(['/upload/'.$record->picture_text],['alt'=> $record->title]);?>
                                 <div class="only-info">
                                     <span><?php echo \Yii::$app->formatter->asDatetime($record->date, "php:d/m/Y");?></span>
                                     <h4><?php echo $record->cat;?></h4>

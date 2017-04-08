@@ -10,7 +10,7 @@ $this->registerMetaTag(['name' => 'description','content' => 'Госзакупк
                     <span><?php echo date('d/m/Y', strtotime($model->date));?></span>
                     <span class="time-blue"><?php echo date('H : i', strtotime($model->date));?></span>
                 </div>
-                <?php echo \yii\helpers\Html::img(['/upload/'.$model->picture_text],['style'=>'float:left']);?>
+                <?php echo \yii\helpers\Html::img(['/upload/'.$model->picture_text],['style'=>'float:left','alt'=> $model->title]);?>
 
                 <p><?php echo $model->annotation;?></p>
                 <div class="pluso go-to-networks" data-background="none;" data-options="medium,square,line,horizontal,counter,sepcounter=1,theme=14" data-services="facebook,twitter,vkontakte"></div>
