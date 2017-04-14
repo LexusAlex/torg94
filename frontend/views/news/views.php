@@ -1,6 +1,11 @@
 <?php
-$this->title = $model->title;
-$this->registerMetaTag(['name' => 'description','content' => 'Госзакупки: ФЗ-44, ФЗ-223, ФЗ-94, государственные закупки, электронные торги и открытый конкурс для госзаказа - '.$model->title]);
+$this->title = $model->title. ' | TORG94: Закупки, 223-ФЗ, 44-ФЗ';
+$this->registerMetaTag(['name' => 'description','content' => strip_tags(\yii\helpers\StringHelper::truncate($model->annotation, 200, ''))]);
+$this->registerMetaTag(['name' => 'keywords','content' => '223-ФЗ, 44-ФЗ, Закупки, Заказчикам, Поставщикам, Госзакупки, '. $model->title]);
+
+$this->registerMetaTag(['property' => "og:title", 'content' => $model->title. ' | TORG94: Закупки, 223-ФЗ, 44-ФЗ']);
+$this->registerMetaTag(['property' => "og:description", 'content' => strip_tags(\yii\helpers\StringHelper::truncate($model->annotation, 200, ''))]);
+$this->registerMetaTag(['property' => "og:url", 'content' => \yii\helpers\Url::current([], true)]);
 ?>
 <div class="container-news">
         <div class="col-lg-10 pad-n col-md-12 col-sm-12 col-xs-12">
