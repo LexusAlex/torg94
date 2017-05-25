@@ -86,11 +86,11 @@ use mihaildev\elfinder\ElFinder;
     <?php
 
     echo $form->field($model, 'annotation')->widget(CKEditor::className(),[
-        'editorOptions' => ElFinder::ckeditorOptions(['elfinder'], ['preset' => 'standart', 'inline' => false]),
+        'editorOptions' => ElFinder::ckeditorOptions(['elfinder'], ['preset' => 'full', 'inline' => false,'language'=> 'ru']),
     ])->hint('Аннотация к публикации');
 
     echo $form->field($model, 'text')->widget(CKEditor::className(),[
-        'editorOptions' => ElFinder::ckeditorOptions(['elfinder'], ['preset' => 'standart', 'inline' => false]),
+        'editorOptions' => ElFinder::ckeditorOptions(['elfinder'], ['preset' => 'full', 'inline' => false,'language'=> 'ru']),
     ])->hint('Текст публикации');
     ?>
 

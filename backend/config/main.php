@@ -46,6 +46,11 @@ return [
             'rules' => [
             ],
         ],
+        'assetManager' => [
+            'class' => 'yii\web\AssetManager',
+            //'forceCopy' => YII_DEBUG,
+            //'forceCopy' => true,
+        ],
 
     ],
     'controllerMap' => [
