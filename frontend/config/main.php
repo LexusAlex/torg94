@@ -87,6 +87,7 @@ return [
                 'infographics'=> 'site/infographics',
                 'subscribe'=> 'site/subscribe',
                 'unsubscribe'=> 'site/unsubscribe',
+                'contacts'=> 'site/contacts',
 
                 'news.php3' => 'news/index',
                 'stat.php3' => 'articles/index',

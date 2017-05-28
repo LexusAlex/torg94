@@ -129,7 +129,7 @@ AppAsset::register($this);
                 <!--<a href=""><img src="img/rss.png" alt="" width="25" height="25"></a>-->
             </div>
             <div class="sitemap">
-                <a href="">| КАРТА САЙТА |</a>
+                <a href="<?php echo \yii\helpers\Url::to(['site/contacts']);?>">| Контакты |</a>
             </div>
         </div>
     </footer>
