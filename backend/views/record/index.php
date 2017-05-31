@@ -121,7 +121,37 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
                 'visible'=> (Yii::$app->request->get('RecordSearch')['tid'] == 2) ? true : false
             ],
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'header'=> 'Действия',
+                'template' => '{view} {update} {delete}',
+                'buttons' => [
+                    'view' => function ($url, $model) {
+                        $u = '';
+                        if ($model->tid == 1) {
+                            $u = 'news/'. $model->id.'.html';
+                        } elseif ($model->tid == 2){
+                            $u = 'stat/'. $model->id.'.html';
+                        }
+                        if($model->status == 1){
+                            return '<a  href="http://torg94.ru/'.$u.'" title="Смотреть на сайте" target="_blank"><span class="glyphicon glyphicon-eye-open"></span></a>';
+                        } else {
+                            return '';
+                        }
+
+                    },
+                    'update' => function ($url, $model) {
+                        return Html::a(
+                            '<span class="glyphicon glyphicon-edit"></span>',
+                            \yii\helpers\Url::to(['update', 'id' => $model->id]),['title' => 'Редактировать','data-pjax' => '0']);
+                    },
+                    'delete' => function ($url, $model) {
+                        return Html::a(
+                            '<span class="glyphicon glyphicon-remove"></span>',
+                            \yii\helpers\Url::to(['delete', 'id' => $model->id]),['title' => 'Удалить','data-pjax' => '0','data-confirm' => 'Вы действительно хотите удалить запись?', 'data-method' => 'post',]);
+                    },
+                ]
+            ],
         ],
     ]);?>
     <?php Pjax::end(); ?>
