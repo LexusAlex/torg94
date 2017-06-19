@@ -671,6 +671,10 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	.container-news{
 		width: 100%;
 	}
+	.wrp-to-one-new img{
+		width:100%;
+		height:auto;
+	}
 	.time-s-date{
 		width: 100%;
 	}

@@ -8,7 +8,7 @@ $this->registerMetaTag(['property' => "og:description", 'content' => strip_tags(
 $this->registerMetaTag(['property' => "og:url", 'content' => \yii\helpers\Url::current([], true)]);
 ?>
 <div class="container-news">
-        <div class="col-lg-10 pad-n col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-10 pad-n col-md-12 col-sm-12 col-xs-11">
             <div class="wrp-to-one-new">
                 <h2><?php echo $model->title;?></h2>
                 <div class="time-one-news">
