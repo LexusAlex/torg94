@@ -219,7 +219,7 @@ class SiteController extends Controller
     public function actionRss()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Record::find()->where(['in','tid',['1,2']])->andWhere(['status'=>1]),
+            'query' => Record::find()->where(['in','tid',[1,2]])->andWhere(['status'=>1]),
             'pagination' => [
                 'pageSize' => 30
             ],
@@ -254,7 +254,7 @@ class SiteController extends Controller
                     return $model->title;
                 },
                 'description' => function ($model, $widget, \Zelenin\Feed $feed) {
-                    return StringHelper::truncateWords($model->annotation, 50);
+                    return StringHelper::truncateWords($model->text, 50);
                 },
                 'link' => function ($model, $widget, \Zelenin\Feed $feed) {
 
