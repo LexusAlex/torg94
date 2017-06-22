@@ -7,6 +7,9 @@ use backend\models\Subscribe;
 use frontend\models\SubscribeForm;
 use Yii;
 use yii\base\InvalidParamException;
+use yii\data\ActiveDataProvider;
+use yii\helpers\StringHelper;
+use yii\helpers\Url;
 use yii\helpers\VarDumper;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
@@ -211,6 +214,61 @@ class SiteController extends Controller
             return $this->render('unsubscribe',['model'=> $model,]);
         }
 
+    }
+
+    public function actionRss()
+    {
+        $dataProvider = new ActiveDataProvider([
+            'query' => Record::find()->where(['in','tid',['1,2']])->andWhere(['status'=>1]),
+            'pagination' => [
+                'pageSize' => 30
+            ],
+            'sort' =>
+            [
+                'defaultOrder' => ['id' => SORT_DESC]
+            ]
+        ]);
+
+        $response = Yii::$app->getResponse();
+        $headers = $response->getHeaders();
+
+        $headers->set('Content-Type', 'application/rss+xml; charset=utf-8');
+
+        echo \Zelenin\yii\extensions\Rss\RssView::widget([
+            'dataProvider' => $dataProvider,
+            'channel' => [
+                'title' => function ($widget, \Zelenin\Feed $feed) {
+                    $feed->addChannelTitle('Госзакупки: ФЗ-44, ФЗ-223, ФЗ-94, государственные закупки, электронные торги и открытый конкурс для госзаказа - поговорим об этом неофициально');
+                },
+                'link' => Url::toRoute('/', true),
+                'description' => 'torg94.ru',
+                'language' => function ($widget, \Zelenin\Feed $feed) {
+                    return 'ru';
+                },
+                /*'image'=> function ($widget, \Zelenin\Feed $feed) {
+                    $feed->addChannelImage('http://example.com/channel.jpg', 'http://example.com', 88, 31, 'Image description');
+                },*/
+            ],
+            'items' => [
+                'title' => function ($model, $widget, \Zelenin\Feed $feed) {
+                    return $model->title;
+                },
+                'description' => function ($model, $widget, \Zelenin\Feed $feed) {
+                    return StringHelper::truncateWords($model->annotation, 50);
+                },
+                'link' => function ($model, $widget, \Zelenin\Feed $feed) {
+
+                    return ($model->tid == 1) ? Url::toRoute(['news/views', 'id' => $model->id], true) : Url::toRoute(['articles/views', 'id' => $model->id], true);
+                },
+                'pubDate' => function ($model, $widget, \Zelenin\Feed $feed) {
+                    $date = \DateTime::createFromFormat('Y-m-d H:i:s', $model->date);
+                    return $date->format(DATE_RSS);
+                },
+                'author' => function ($model, $widget, \Zelenin\Feed $feed) {
+                    return 'TORG94';
+                },
+            ]
+        ]);
     }
 
     /**

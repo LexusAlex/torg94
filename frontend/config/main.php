@@ -88,6 +88,7 @@ return [
                 'subscribe'=> 'site/subscribe',
                 'unsubscribe'=> 'site/unsubscribe',
                 'contacts'=> 'site/contacts',
+                'rss'=> 'site/rss',
 
                 'news.php3' => 'news/index',
                 'stat.php3' => 'articles/index',
