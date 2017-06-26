@@ -24,6 +24,7 @@ AppAsset::register($this);
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <?php $this->head() ?>
+        <link rel="alternate" type="application/rss+xml" title="Госзакупки: ФЗ-44, ФЗ-223, ФЗ-94, государственные закупки, электронные торги и открытый конкурс для госзаказа - поговорим об этом неофициально" href="http://torg94.ru/rss"/>
     </head>
     <body>
     <?php $this->beginBody() ?>
@@ -126,7 +127,7 @@ AppAsset::register($this);
                 <a href="<?php echo \yii\helpers\Url::to('site/subscribe');?>"><?php echo \yii\helpers\Html::img(['/img/mail.png'],['width'=>'25','height'=>'25']);?></a>
                 <a href="https://www.facebook.com/pages/Torg94ru-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%B8-%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8-%D0%BE-%D0%B3%D0%BE%D1%81%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D0%BA%D0%B0%D1%85-%D0%AD%D0%A6%D0%9F-%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D1%85-%D1%82%D0%BE%D1%80%D0%B3%D0%B0%D1%85/179865092066104?sk=wall"><?php echo \yii\helpers\Html::img(['/img/fb.png'],['width'=>'25','height'=>'25']);?></a>
                 <a href="https://twitter.com/torg94"><?php echo \yii\helpers\Html::img(['/img/twitter.png'],['width'=>'25','height'=>'25']);?></a>
-                <!--<a href=""><img src="img/rss.png" alt="" width="25" height="25"></a>-->
+                <a href="http://torg94.ru/rss"><?php echo \yii\helpers\Html::img(['/img/rss.png'],['width'=>'25','height'=>'25']);?></a>
             </div>
             <div class="sitemap">
                 <a href="<?php echo \yii\helpers\Url::to(['site/contacts']);?>">| Контакты |</a>
