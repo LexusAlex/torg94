@@ -96,6 +96,9 @@ return [
                 'zak.php3' => 'articles/index',
                 'uslugi.php3' => 'articles/index',
                 /*'cont.php3' => 'site/index'*/
+                'uslugi' => 'articles/services',
+                'zak' => 'articles/purchase',
+                'stat' => 'articles/analytics'
             ],
         ],
 
