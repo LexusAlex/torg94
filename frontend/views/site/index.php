@@ -56,7 +56,7 @@ $this->registerMetaTag(['property' => "og:url", 'content' => \yii\helpers\Url::b
                         </div>
                 </div>
                 <?php } ?>
-                <a href="<?php echo \yii\helpers\Url::to(['articles/index']);?>" class="all-news">Все статьи</a>
+                <a style="padding-top: 30px" href="<?php echo \yii\helpers\Url::to(['articles/index']);?>" class="all-news">Все статьи</a>
             </div>
             <div class="special-project">
                 <h4>спецпроекты</h4>
