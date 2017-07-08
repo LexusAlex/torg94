@@ -41,16 +41,16 @@ $this->registerMetaTag(['property' => "og:url", 'content' => \yii\helpers\Url::b
     <div class="container">
         <div class="content">
             <div class="block-of-news">
-                <?php foreach ($records as $record){ ?>
+                <?php foreach ($record as $rec){ ?>
                     <div class="col-lg-6 pad-no col-md-6 col-sm-6 col-xs-12">
                         <div class="one-news-position">
-                            <a href="<?php echo \yii\helpers\Url::to(['articles/views', 'id' => $record->id]);?>">
-                                <?php echo \yii\helpers\Html::img(['/upload/'.$record->picture_text],['alt'=> $record->title]);?>
+                            <a href="<?php echo \yii\helpers\Url::to(['articles/views', 'id' => $rec->id]);?>">
+                                <?php echo \yii\helpers\Html::img(['/upload/'.$rec->picture_text],['alt'=> $rec->title]);?>
                                 <div class="only-info">
-                                    <span><?php echo \Yii::$app->formatter->asDatetime($record->date, "php:d/m/Y");?></span>
-                                    <h4><?php echo $record->cat;?></h4>
-                                    <h3><?php echo $record->title;?></h3>
-                                    <p><?php echo \yii\helpers\StringHelper::truncateWords($record->annotation, 7, ''); ?></p>
+                                    <span><?php echo \Yii::$app->formatter->asDatetime($rec->date, "php:d/m/Y");?></span>
+                                    <h4><?php echo $rec->cat;?></h4>
+                                    <h3><?php echo $rec->title;?></h3>
+                                    <p><?php echo \yii\helpers\StringHelper::truncateWords($rec->annotation, 7, ''); ?></p>
                                 </div>
                             </a>
                         </div>
