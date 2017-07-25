@@ -19,9 +19,11 @@ $this->registerMetaTag(['property' => "og:url", 'content' => \yii\helpers\Url::b
             <div class="statistic-wrp">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="statistic">
-                        <h1 style="color: white;font-size: 19px; line-height: 29px;margin-top: 18px">Дмитрий Сытин генеральный директор ТЭК-ТОрг</h1>
+                        <h1 style="color: white;font-size: 19px; line-height: 29px;margin-top: 18px">"ГОРЯЧАЯ ЛИНИЯ"</h1>
                         <p style="color: white;font-size: 14px; line-height: 25px">
-                            С 25 по 30 июля задайте вопрос генеральному директору электронной торговой площадки ТЭК-Торг Дмитрию Сытину в рамках горячей линии Т94.
+                            С 25 по 30 июля задайте вопрос <b>генеральному директору</b> электронной торговой площадки ТЭК-Торг <b>ДМИТРИЮ СЫТИНУ</b> в рамках горячей линии Т94.
+                        </p>
+                        <p style="color: white;font-size: 14px; line-height: 25px">
                             Ответы на ваши вопросы будут опубликованы на Т94 во вторник 1 августа.
                         </p>
                         <!--<canvas id="market" width="100" height="100"></canvas>-->
