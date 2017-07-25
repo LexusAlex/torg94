@@ -1064,3 +1064,11 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 		top: 196px;
 	}
 }
+
+blockquote p{
+	margin-left: 10px;
+	padding-left: 5px;
+	font-style: italic;
+	border-left: solid 4px ghostwhite;
+	font-size: 15px !important;
+}

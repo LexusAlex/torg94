@@ -98,7 +98,8 @@ return [
                 /*'cont.php3' => 'site/index'*/
                 'uslugi' => 'articles/services',
                 'zak' => 'articles/purchase',
-                'stat' => 'articles/analytics'
+                'stat' => 'articles/analytics',
+                'airline' => 'site/airline'
             ],
         ],
 

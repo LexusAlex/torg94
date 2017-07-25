@@ -4,6 +4,7 @@ namespace frontend\controllers;
 use backend\models\Category;
 use backend\models\Record;
 use backend\models\Subscribe;
+use frontend\models\AirlineForm;
 use frontend\models\SubscribeForm;
 use Yii;
 use yii\base\InvalidParamException;
@@ -196,6 +197,20 @@ class SiteController extends Controller
             return $this->render('subscribe',['model'=> $model,]);
         } else {
             return $this->render('subscribe',['model'=> $model,]);
+        }
+
+    }
+
+    public function actionAirline()
+    {
+        $model = new AirlineForm();
+
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            Yii::$app->session->setFlash('success', 'Ваше сообщение отправлено');
+            $model->sendEmail('alexsey_89@bk.ru');
+            return $this->render('airline',['model'=> $model,]);
+        } else {
+            return $this->render('airline',['model'=> $model,]);
         }
 
     }
