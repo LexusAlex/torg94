@@ -207,7 +207,7 @@ class SiteController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             Yii::$app->session->setFlash('success', 'Ваше сообщение отправлено');
-            $model->sendEmail('alexsey_89@bk.ru');
+            $model->sendEmail('dropz32@mail.ru');
             return $this->render('airline',['model'=> $model,]);
         } else {
             return $this->render('airline',['model'=> $model,]);
