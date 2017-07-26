@@ -14,10 +14,17 @@ $this->title = 'Задать вопрос Дмитрию Сытину';
         <div class="content">
             <div class="">
                 <?= \common\widgets\Alert::widget() ?>
-                <h1 style="margin-top: 15px;" class="text-center"><?= Html::encode($this->title) ?></h1>
-                <div class="col-xs-4 col-xs-push-4">
-                    <?php echo \yii\helpers\Html::img(['/img/speak_small.jpg'],['style'=>'text-align:center','alt'=> '','width'=>'160','height'=>'240']);?>
+                <div class="col-xs-12" style="line-height: 22px">
+                    <br>
+                    <h1 style="text-align: center">ГОРЯЧАЯ ЛИНИЯ</h1>
+                    <p style="">
+                        С 25 по 30 июля задайте вопрос генеральному директору электронной торговой площадки ТЭК-Торг <b>ДМИТРИЮ СЫТИНУ</b> в рамках горячей линии Т94.
+                    </p>
+                    <p style="">
+                        Ответы на ваши вопросы будут опубликованы на Т94 во вторник 1 августа.
+                    </p>
                 </div>
+                <h1 style="margin-top: 15px;" class="text-center"><?= Html::encode($this->title) ?></h1>
                 <div class="col-xs-12">
                     <div class="one-news-position">
                         <div class="alert alert">
