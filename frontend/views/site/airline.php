@@ -7,7 +7,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Задать вопрос Дмитрию Сытину';
+$this->title = 'Задать вопрос Дмитрию Сытину:';
 ?>
 <div class="block-of-news-wrp" style="height: 1000px">
     <div class="container">
@@ -16,12 +16,12 @@ $this->title = 'Задать вопрос Дмитрию Сытину';
                 <?= \common\widgets\Alert::widget() ?>
                 <div class="col-xs-12" style="line-height: 22px">
                     <br>
-                    <h1 style="text-align: center">ГОРЯЧАЯ ЛИНИЯ</h1>
+                    <h1 style="text-align: center"><b>ГОРЯЧАЯ ЛИНИЯ</b></h1>
                     <p style="">
                         С 25 по 30 июля задайте вопрос генеральному директору электронной торговой площадки ТЭК-Торг <b>ДМИТРИЮ СЫТИНУ</b> в рамках горячей линии Т94.
                     </p>
                     <p style="">
-                        Ответы на ваши вопросы будут опубликованы на Т94 во вторник 1 августа.
+                        Ответы на ваши вопросы будут опубликованы на Т94 во вторник, 1 августа.
                     </p>
                 </div>
                 <h1 style="margin-top: 15px;" class="text-center"><?= Html::encode($this->title) ?></h1>

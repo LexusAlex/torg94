@@ -12,16 +12,15 @@ $this->registerMetaTag(['property' => "og:url", 'content' => \yii\helpers\Url::c
         <div class="wrp-to-one-new">
 
             <h2><?php echo $model->title;?></h2>
+            <?php echo \yii\helpers\Html::img(['/upload/'.$model->picture_text],['alt'=> $model->title,'style'=>'float:left']);?>
             <div class="time-one-news">
                 <span><?php echo date('d/m/Y', strtotime($model->date));?></span>
                 <span class="time-blue"><?php echo date('H : i', strtotime($model->date));?></span>
             </div>
-            <?php echo \yii\helpers\Html::img(['/upload/'.$model->picture_text],['alt'=> $model->title,'style'=>'float:left']);?>
-            <div class="pluso go-to-networks" data-background="none;" data-options="medium,square,line,horizontal,counter,sepcounter=1,theme=14" data-services="facebook,twitter,vkontakte"></div>
             <p><?php echo $model->annotation;?></p>
 
             <?php echo $model->text;?>
-
+            <div class="pluso go-to-networks" data-background="none;" data-options="medium,square,line,horizontal,counter,sepcounter=1,theme=14" data-services="facebook,twitter,vkontakte"></div>
             <div class="news-on-this-new">
                 <span>новости по теме</span>
                 <div class="slider-in-news-news">
