@@ -99,7 +99,7 @@ return [
                 'uslugi' => 'articles/services',
                 'zak' => 'articles/purchase',
                 'stat' => 'articles/analytics',
-                'airline' => 'site/airline'
+                //'airline' => 'site/airline'
             ],
         ],
 
