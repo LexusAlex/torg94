@@ -16,15 +16,15 @@ $this->registerMetaTag(['property' => "og:url", 'content' => \yii\helpers\Url::b
             <div class="infographic">
                 <span></span>
             </div>
-            <div class="statistic-wrp">
+            <div class="statistic-wrp" style="background-color: transparent; border: none">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="statistic">
-                        <canvas id="market" width="100" height="100"></canvas>
+
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="statistic">
-                        <canvas id="market-three" width="100" height="100"></canvas>
+
                     </div>
                 </div>
             </div>
