@@ -282,6 +282,8 @@ class SiteController extends Controller
                     return ($model->tid == 1) ? Url::toRoute(['news/views', 'id' => $model->id], true) : Url::toRoute(['articles/views', 'id' => $model->id], true);
                 },
                 'pubDate' => function ($model, $widget, \Zelenin\Feed $feed) {
+                    $feed->addItemElement('yandex:full-text',$model->text);
+
                     $date = \DateTime::createFromFormat('Y-m-d H:i:s', $model->date);
                     return $date->format(DATE_RSS);
                 },
