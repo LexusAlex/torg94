@@ -81,7 +81,7 @@ class SiteController extends Controller
     {
 
         $categories = Category::find()->where('id in (5,6,7,8,9,10)')->orderBy('name desc')->all();
-        $record = Record::find()->where(['tid' => 2, 'status' => 1])->andWhere('date <= NOW() + INTERVAL 2 HOUR')->limit(6)->orderBy('id desc');
+        $record = Record::find()->where(['tid' => 2, 'status' => 1])->andWhere('date <= NOW() + INTERVAL 2 HOUR')->limit(6)->orderBy('id desc')->all();
 
         $records = [];
         foreach ($categories as $id=>$item){
