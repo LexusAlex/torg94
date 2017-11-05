@@ -13,7 +13,7 @@ class ArticlesController extends \yii\web\Controller
     {
         $this->layout = 'allNews';
 
-        $records = Record::find()->andWhere(['status'=>1,'tid'=>2])->with(['t'])->andWhere('date <= NOW() + INTERVAL 1 HOUR')->orderBy('date DESC');
+        $records = Record::find()->andWhere(['status'=>1,'tid'=>2])->with(['t'])->andWhere('date <= NOW() + INTERVAL 2 HOUR')->orderBy('date DESC');
         $dataProvider = new ActiveDataProvider([
             'query' => $records,
             'pagination' => [

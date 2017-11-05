@@ -12,7 +12,7 @@ class NewsController extends \yii\web\Controller
     {
         $this->layout = 'allNews';
 
-        $records = Record::find()->andWhere(['status'=>1,'tid'=>1])->andWhere('date <= NOW() + INTERVAL 1 HOUR')->with(['t'])->orderBy('date DESC');
+        $records = Record::find()->andWhere(['status'=>1,'tid'=>1])->andWhere('date <= NOW() + INTERVAL 2 HOUR')->with(['t'])->orderBy('date DESC');
         $dataProvider = new ActiveDataProvider([
             'query' => $records,
             'pagination' => [
@@ -25,7 +25,7 @@ class NewsController extends \yii\web\Controller
         $newNews = Record::find()
             ->select(['*'])
             ->andWhere(['status'=>1,'tid'=>1])
-            ->andWhere('date <= NOW() + INTERVAL 1 HOUR')
+            ->andWhere('date <= NOW() + INTERVAL 2 HOUR')
             //->andWhere(['!=','id',$id])
             ->orderBy('id DESC')
             ->limit(2)
@@ -40,13 +40,13 @@ class NewsController extends \yii\web\Controller
 
         $model = Record::find()
             ->select(['*'])
-            ->andWhere(['id'=>$id,'status'=>1,'tid'=>1])->andWhere('date <= NOW() + INTERVAL 1 HOUR')
+            ->andWhere(['id'=>$id,'status'=>1,'tid'=>1])->andWhere('date <= NOW() + INTERVAL 2 HOUR')
             ->one();
 
         $newNews = Record::find()
             ->select(['*'])
             ->andWhere(['status'=>1,'tid'=>1])
-            ->andWhere('date <= NOW() + INTERVAL 1 HOUR')
+            ->andWhere('date <= NOW() + INTERVAL 2 HOUR')
             ->andWhere(['!=','id',$id])
             ->orderBy('id DESC')
             ->limit(4)
