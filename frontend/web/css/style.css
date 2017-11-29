@@ -777,7 +777,11 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	margin-bottom: 25px;
 }
 
-
+@media (min-width: 1199px) {
+	.tec_banner_bottom{
+		display: none;
+	}
+}
 
 
 @media (max-width: 1199px) {
@@ -874,6 +878,10 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 		position: absolute;
 		top: 75px;
 		left: 0;
+	}
+
+	.tec_banner{
+		display: none;
 	}
 
 
