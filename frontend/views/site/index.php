@@ -87,9 +87,6 @@ $this->registerMetaTag(['property' => "og:url", 'content' => \yii\helpers\Url::b
                     </div>
                 </div>
             </div>
-            <div class="tec_banner_bottom" style="text-align: center;">
-                <a href="http://probusinesstv.ru/programs/248/18277/"><?php echo \yii\helpers\Html::img(['img/baner_TEC.jpg'],['style' => 'width:30%']);?></a>
-            </div>
         </div>
     </div>
 </div>
