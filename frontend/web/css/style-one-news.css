@@ -612,7 +612,7 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 		float: left;
 	}
 	.infographic-wrp{
-		display: none;
+		/*display: none;*/
 	}
 	.wrp-to-date{
 		display: none;

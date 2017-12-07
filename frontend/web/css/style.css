@@ -777,12 +777,14 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 	margin-bottom: 25px;
 }
 
-@media (min-width: 1199px) {
-	.tec_banner_bottom{
+@media (min-width: 769px) {
+	.tec_banner_mob{
 		display: none;
 	}
+	.tec_banner_img{
+		width: 50%;
+	}
 }
-
 
 @media (max-width: 1199px) {
 	.container{
@@ -882,6 +884,9 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 
 	.tec_banner{
 		display: none;
+	}
+	.tec_banner_img{
+		width: 50%;
 	}
 
 
@@ -1013,7 +1018,10 @@ url('../fonts/HelveticaNeueCyr-Light.svg#HelveticaNeueCyr-Light') format('svg');
 		float: left;
 	}
 	.infographic-wrp{
-		display: none;
+		/*display: none;*/
+	}
+	.tec_banner_img{
+		width: 50%;
 	}
 	.wrp-to-date{
 		display: none;
