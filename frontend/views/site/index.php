@@ -14,7 +14,7 @@ $this->registerMetaTag(['property' => "og:url", 'content' => \yii\helpers\Url::b
     <div class="container">
         <div class="content">
             <div class="tec_banner_mob" style="text-align: center">
-                <a href="http://www.probusinesstv.ru/programs/248/18334/"><?php echo \yii\helpers\Html::img(['img/0001.jpg'],['class' => 'tec_banner_img','style' => '']);?></a>
+                <a href="https://www.youtube.com/watch?v=ntCC4LwxG9I&list=PLGTPUdAJ9ZrGz_zQWpeWIoNstrCYww9BH&index=4"><?php echo \yii\helpers\Html::img(['img/0002.jpg'],['class' => 'tec_banner_img','style' => '']);?></a>
             </div>
             <div class="infographic">
                 <span></span>

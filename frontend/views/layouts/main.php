@@ -72,7 +72,7 @@ AppAsset::register($this);
                     <li><a href="<?php echo \yii\helpers\Url::to(['specprojects/all']);?>" class="no-bor-b">Спецпроекты</a></li>
                 </ul>
                 <div class="tec_banner">
-                    <a href="http://www.probusinesstv.ru/programs/248/18334/"><?php echo Html::img(['img/0001.jpg'],['style' => 'width:100%']);?></a>
+                    <a href="https://www.youtube.com/watch?v=ntCC4LwxG9I&list=PLGTPUdAJ9ZrGz_zQWpeWIoNstrCYww9BH&index=4"><?php echo Html::img(['img/0002.jpg'],['style' => 'width:100%']);?></a>
                 </div>
             </div>
         </aside>
