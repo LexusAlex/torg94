@@ -71,9 +71,9 @@ AppAsset::register($this);
                     <li><a href="<?php echo \yii\helpers\Url::to(['articles/events']);?>">Мероприятия</a></li>
                     <li><a href="<?php echo \yii\helpers\Url::to(['specprojects/all']);?>" class="no-bor-b">Спецпроекты</a></li>
                 </ul>
-                <div class="tec_banner">
-                    <a href="http://probusinesstv.ru/programs/248/18477/"><?php echo Html::img(['img/0004.jpg'],['style' => 'width:100%']);?></a>
-                </div>
+                <!--<div class="tec_banner">
+                    <a href="http://probusinesstv.ru/programs/248/18477/"><?php /*echo Html::img(['img/0004.jpg'],['style' => 'width:100%']);*/?></a>
+                </div>-->
             </div>
         </aside>
 
