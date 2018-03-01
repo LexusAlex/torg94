@@ -36,12 +36,12 @@ $this->registerMetaTag(['property' => "og:url", 'content' => \yii\helpers\Url::c
             <p class="after-slider-right"></p>
 
         </div>
+        <a href="https://etpfs.ru/etp_gpb/bank_guarantee/leads/?utm_source=torg94&utm_medium=referral&utm_campaign=banner1&utm_content=under_the_news"><?php echo \yii\helpers\Html::img(['img/bnr_FS-Products_850x.png'],['style' => 'width:100%']);?></a>
         <div class="special-project">
             <h4>спецпроекты</h4>
         </div>
 
     </div>
-
 
     <div class="col-lg-2">
         <aside class="aside-right-all-news">
@@ -58,4 +58,5 @@ $this->registerMetaTag(['property' => "og:url", 'content' => \yii\helpers\Url::c
             </div>
         </aside>
     </div>
+
 </div>
